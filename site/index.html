@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PR Wall</title>
+  <meta name="description" content="A wall of pull requests to open-source projects.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg fill='none' stroke='%238250df' stroke-width='1.6' stroke-linecap='round'%3E%3Ccircle cx='4' cy='3.5' r='1.75'/%3E%3Ccircle cx='4' cy='12.5' r='1.75'/%3E%3Ccircle cx='12' cy='8' r='1.75'/%3E%3Cpath d='M4 5.25v5.5M4 5.25c0 2 2 2.75 4 2.75h2.25'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="who">
+        <img class="me" id="me-avatar" alt="" width="64" height="64">
+        <div>
+          <h1 id="me-name">PR Wall</h1>
+          <p class="tagline" id="tagline"></p>
+        </div>
+      </div>
+      <dl class="stats" id="stats"></dl>
+      <div class="activity" id="activity" aria-label="Pull requests opened per month"></div>
+    </header>
+
+    <nav class="controls" aria-label="Filters">
+      <div class="seg" role="tablist" aria-label="View">
+        <button type="button" role="tab" data-view="repos">Repos</button>
+        <button type="button" role="tab" data-view="timeline">Timeline</button>
+      </div>
+      <div class="chips" id="chips"></div>
+      <label class="search">
+        <span class="sr-only">Search</span>
+        <input id="q" type="search" placeholder="Search PRs or repos" autocomplete="off">
+      </label>
+    </nav>
+
+    <section id="wall" aria-live="polite"></section>
+
+    <footer class="foot" id="foot"></footer>
+  </main>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

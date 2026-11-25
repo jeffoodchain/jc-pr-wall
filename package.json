@@ -1,0 +1,14 @@
+{
+  "name": "jc-pr-wall",
+  "private": true,
+  "type": "module",
+  "description": "A wall of my pull requests to open-source projects.",
+  "scripts": {
+    "fetch": "node scripts/fetch-prs.mjs",
+    "serve": "python3 -m http.server 8000 --directory site",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

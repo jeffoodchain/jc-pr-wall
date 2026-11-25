@@ -1,0 +1,1543 @@
+{
+  "generatedAt": "2026-11-25T09:22:39.562Z",
+  "user": {
+    "login": "jeffoodchain",
+    "name": null,
+    "avatarUrl": "https://avatars.githubusercontent.com/u/78428519?v=4",
+    "url": "https://github.com/jeffoodchain"
+  },
+  "stats": {
+    "total": 116,
+    "merged": 82,
+    "open": 10,
+    "closed": 24,
+    "repos": 36,
+    "owners": 20,
+    "stars": 10495
+  },
+  "repos": [
+    {
+      "fullName": "flyteorg/flyte",
+      "owner": "flyteorg",
+      "name": "flyte",
+      "url": "https://github.com/flyteorg/flyte",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/35380635?v=4",
+      "description": "Type-safe, distributed orchestration of agents, ML pipelines, and real-time inference on your k8s — in pure Python with async/await, also other languages (rust, go and ts)",
+      "stars": 7805,
+      "language": "Go"
+    },
+    {
+      "fullName": "OffchainLabs/prysm",
+      "owner": "OffchainLabs",
+      "name": "prysm",
+      "url": "https://github.com/OffchainLabs/prysm",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/43838009?v=4",
+      "description": "Go implementation of Ethereum proof of stake",
+      "stars": 3792,
+      "language": "Go"
+    },
+    {
+      "fullName": "ChainSafe/lodestar",
+      "owner": "ChainSafe",
+      "name": "lodestar",
+      "url": "https://github.com/ChainSafe/lodestar",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/27474093?v=4",
+      "description": "🌟 Ethereum Consensus client for the Zig and TypeScript ecosystem",
+      "stars": 1438,
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "apache/asyncband",
+      "owner": "apache",
+      "name": "asyncband",
+      "url": "https://github.com/apache/asyncband",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/47359?v=4",
+      "description": "Apache Asyncband™ (Incubating): Composable, runtime-agnostic concurrency building blocks for async Rust.",
+      "stars": 308,
+      "language": "Rust"
+    },
+    {
+      "fullName": "zkmopro/mopro",
+      "owner": "zkmopro",
+      "name": "mopro",
+      "url": "https://github.com/zkmopro/mopro",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/167452444?v=4",
+      "description": "Making client-side ZK proving on mobile simple.",
+      "stars": 244,
+      "language": "Rust"
+    },
+    {
+      "fullName": "apache/datasketches-rust",
+      "owner": "apache",
+      "name": "datasketches-rust",
+      "url": "https://github.com/apache/datasketches-rust",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/47359?v=4",
+      "description": "A software library of stochastic streaming algorithms, a.k.a. sketches.",
+      "stars": 155,
+      "language": "Rust"
+    },
+    {
+      "fullName": "flyteorg/flyte-sdk",
+      "owner": "flyteorg",
+      "name": "flyte-sdk",
+      "url": "https://github.com/flyteorg/flyte-sdk",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/35380635?v=4",
+      "description": "Type-safe, distributed orchestration of agents, ML pipelines, and real-time inference — in pure Python with async/await.",
+      "stars": 128,
+      "language": "Python"
+    },
+    {
+      "fullName": "Unirep/Unirep",
+      "owner": "Unirep",
+      "name": "Unirep",
+      "url": "https://github.com/Unirep/Unirep",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/90033109?v=4",
+      "description": "A Zero-Knowledge Protocol for Provable User Data Management",
+      "stars": 104,
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "blockblaz/zeam",
+      "owner": "blockblaz",
+      "name": "zeam",
+      "url": "https://github.com/blockblaz/zeam",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/132601277?v=4",
+      "description": "Ethereum Lean client in Zig (wip)",
+      "stars": 97,
+      "language": "Zig"
+    },
+    {
+      "fullName": "yuaanlin/nextjs.tw",
+      "owner": "yuaanlin",
+      "name": "nextjs.tw",
+      "url": "https://github.com/yuaanlin/nextjs.tw",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/21105863?v=4",
+      "description": "Next.js documentation in Traditional Chinese, maintained by the opensource community. 由開源社群維護的 Next.js 繁體中文官方文件。",
+      "stars": 62,
+      "language": "MDX"
+    },
+    {
+      "fullName": "eth-protocol-fellows/cohort-seven",
+      "owner": "eth-protocol-fellows",
+      "name": "cohort-seven",
+      "url": "https://github.com/eth-protocol-fellows/cohort-seven",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/84336121?v=4",
+      "description": "The seventh cohort of the Ethereum Protocol Fellowship",
+      "stars": 54,
+      "language": "Python"
+    },
+    {
+      "fullName": "zen-eth/eth-p2p-z",
+      "owner": "zen-eth",
+      "name": "eth-p2p-z",
+      "url": "https://github.com/zen-eth/eth-p2p-z",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/190158618?v=4",
+      "description": "Ethereum p2p implementation in Zig",
+      "stars": 40,
+      "language": "Zig"
+    },
+    {
+      "fullName": "zkmopro/gpu-acceleration",
+      "owner": "zkmopro",
+      "name": "gpu-acceleration",
+      "url": "https://github.com/zkmopro/gpu-acceleration",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/167452444?v=4",
+      "description": "Explorations on mobile-first GPU acceleration, currently support MSM.",
+      "stars": 30,
+      "language": "Rust"
+    },
+    {
+      "fullName": "ChainSafe/lodestar-z",
+      "owner": "ChainSafe",
+      "name": "lodestar-z",
+      "url": "https://github.com/ChainSafe/lodestar-z",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/27474093?v=4",
+      "description": "Zig libraries for Lodestar",
+      "stars": 16,
+      "language": "Zig"
+    },
+    {
+      "fullName": "tokamak-network/tokamak-sybil-resistance",
+      "owner": "tokamak-network",
+      "name": "tokamak-sybil-resistance",
+      "url": "https://github.com/tokamak-network/tokamak-sybil-resistance",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/30994093?v=4",
+      "description": "",
+      "stars": 9,
+      "language": "Go"
+    },
+    {
+      "fullName": "tokamak-network/Tokamak-zk-EVM",
+      "owner": "tokamak-network",
+      "name": "Tokamak-zk-EVM",
+      "url": "https://github.com/tokamak-network/Tokamak-zk-EVM",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/30994093?v=4",
+      "description": "Tokamak zk-EVM: CLI and proving pipeline to convert Tokamak Layer 2 transactions into zk-SNARK proofs",
+      "stars": 7,
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "ChainSafe/blst-z",
+      "owner": "ChainSafe",
+      "name": "blst-z",
+      "url": "https://github.com/ChainSafe/blst-z",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/27474093?v=4",
+      "description": "Zig wrapper for [supranational/blst](https://github.com/supranational/blst) native bindings, a highly performant BLS12-381 signature library.",
+      "stars": 4,
+      "language": "Zig"
+    },
+    {
+      "fullName": "social-tw/social-tw-website",
+      "owner": "social-tw",
+      "name": "social-tw-website",
+      "url": "https://github.com/social-tw/social-tw-website",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/135040411?v=4",
+      "description": "",
+      "stars": 4,
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "ReamLabs/leanstart",
+      "owner": "ReamLabs",
+      "name": "leanstart",
+      "url": "https://github.com/ReamLabs/leanstart",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/189356821?v=4",
+      "description": "A package for deploying lean consensus nodes in a devnet with a Kubernetes backend in Rust 🦀",
+      "stars": 3,
+      "language": "Rust"
+    },
+    {
+      "fullName": "uog-zkp-lab/zk-server",
+      "owner": "uog-zkp-lab",
+      "name": "zk-server",
+      "url": "https://github.com/uog-zkp-lab/zk-server",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/160236687?v=4",
+      "description": "a zk_server for data processor to generate the proof locally themselves",
+      "stars": 2,
+      "language": "Rust"
+    },
+    {
+      "fullName": "zen-eth/lsquic",
+      "owner": "zen-eth",
+      "name": "lsquic",
+      "url": "https://github.com/zen-eth/lsquic",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/190158618?v=4",
+      "description": "lsquic packaged for zig",
+      "stars": 2,
+      "language": "Zig"
+    },
+    {
+      "fullName": "ChainSafe/zig-discv5",
+      "owner": "ChainSafe",
+      "name": "zig-discv5",
+      "url": "https://github.com/ChainSafe/zig-discv5",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/27474093?v=4",
+      "description": "",
+      "stars": 1,
+      "language": "Zig"
+    },
+    {
+      "fullName": "stephanieperng/Hamster-Game",
+      "owner": "stephanieperng",
+      "name": "Hamster-Game",
+      "url": "https://github.com/stephanieperng/Hamster-Game",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/278766561?v=4",
+      "description": "Make my dead hamsters live in your computer forever",
+      "stars": 1,
+      "language": "HTML"
+    },
+    {
+      "fullName": "SWF-Lab/Github-Breakdown",
+      "owner": "SWF-Lab",
+      "name": "Github-Breakdown",
+      "url": "https://github.com/SWF-Lab/Github-Breakdown",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/109651553?v=4",
+      "description": "",
+      "stars": 1,
+      "language": "Python"
+    },
+    {
+      "fullName": "beBit-tech/pretest",
+      "owner": "beBit-tech",
+      "name": "pretest",
+      "url": "https://github.com/beBit-tech/pretest",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/69286147?v=4",
+      "description": "",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
+      "fullName": "g0v/nobody",
+      "owner": "g0v",
+      "name": "nobody",
+      "url": "https://github.com/g0v/nobody",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/2668086?v=4",
+      "description": "",
+      "stars": 0,
+      "language": null
+    },
+    {
+      "fullName": "Splix-ethtaipei/splix-frontend",
+      "owner": "Splix-ethtaipei",
+      "name": "splix-frontend",
+      "url": "https://github.com/Splix-ethtaipei/splix-frontend",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/206233514?v=4",
+      "description": "",
+      "stars": 0,
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "Splix-ethtaipei/Splix-indexer-api",
+      "owner": "Splix-ethtaipei",
+      "name": "Splix-indexer-api",
+      "url": "https://github.com/Splix-ethtaipei/Splix-indexer-api",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/206233514?v=4",
+      "description": "",
+      "stars": 0,
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "SWF-Lab/DappChef-Core-Contract",
+      "owner": "SWF-Lab",
+      "name": "DappChef-Core-Contract",
+      "url": "https://github.com/SWF-Lab/DappChef-Core-Contract",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/109651553?v=4",
+      "description": "🍩 DappChef is a Ethereum Smart Contract Development Learning platform.",
+      "stars": 0,
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "SWF-Lab/DappChef-ProblemsDB",
+      "owner": "SWF-Lab",
+      "name": "DappChef-ProblemsDB",
+      "url": "https://github.com/SWF-Lab/DappChef-ProblemsDB",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/109651553?v=4",
+      "description": "🍩 DappChef is a Ethereum Smart Contract Development Learning platform.",
+      "stars": 0,
+      "language": "Solidity"
+    },
+    {
+      "fullName": "tokamak-network/syb-circuits",
+      "owner": "tokamak-network",
+      "name": "syb-circuits",
+      "url": "https://github.com/tokamak-network/syb-circuits",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/30994093?v=4",
+      "description": "",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
+      "fullName": "tokamak-network/syb-jupyter-notebooks",
+      "owner": "tokamak-network",
+      "name": "syb-jupyter-notebooks",
+      "url": "https://github.com/tokamak-network/syb-jupyter-notebooks",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/30994093?v=4",
+      "description": "",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
+      "fullName": "tokamak-network/tokamak-rollup-metadata-repository",
+      "owner": "tokamak-network",
+      "name": "tokamak-rollup-metadata-repository",
+      "url": "https://github.com/tokamak-network/tokamak-rollup-metadata-repository",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/30994093?v=4",
+      "description": "L2 rollup registration standard for the Tokamak ecosystem — schema, validation and registry for rollup metadata",
+      "stars": 0,
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "uog-zkp-lab/zk-abe-backend",
+      "owner": "uog-zkp-lab",
+      "name": "zk-abe-backend",
+      "url": "https://github.com/uog-zkp-lab/zk-abe-backend",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/160236687?v=4",
+      "description": "A backend server including key generating server, KGS for zkabe system",
+      "stars": 0,
+      "language": "Rust"
+    },
+    {
+      "fullName": "uog-zkp-lab/zk-abe-client",
+      "owner": "uog-zkp-lab",
+      "name": "zk-abe-client",
+      "url": "https://github.com/uog-zkp-lab/zk-abe-client",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/160236687?v=4",
+      "description": "Client side of zk-abe system",
+      "stars": 0,
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "william00646-cloud/Podcast2Notebook",
+      "owner": "william00646-cloud",
+      "name": "Podcast2Notebook",
+      "url": "https://github.com/william00646-cloud/Podcast2Notebook",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/248120220?v=4",
+      "description": "Converts podcast episodes into notes, slides, and mind maps using AI transcription",
+      "stars": 0,
+      "language": "HTML"
+    }
+  ],
+  "prs": [
+    {
+      "repo": "flyteorg/flyte",
+      "number": 8414,
+      "title": "fix: apply the run-level service account and security.service_account setting to task pods",
+      "url": "https://github.com/flyteorg/flyte/pull/8414",
+      "state": "merged",
+      "createdAt": "2026-11-16T12:08:33Z",
+      "mergedAt": "2026-11-16T19:35:19Z",
+      "closedAt": "2026-11-16T19:35:19Z"
+    },
+    {
+      "repo": "OffchainLabs/prysm",
+      "number": 17800,
+      "title": "Lc backfill era performance fix",
+      "url": "https://github.com/OffchainLabs/prysm/pull/17800",
+      "state": "closed",
+      "createdAt": "2026-10-30T10:22:07Z",
+      "mergedAt": null,
+      "closedAt": "2026-10-30T10:22:32Z"
+    },
+    {
+      "repo": "OffchainLabs/prysm",
+      "number": 17731,
+      "title": "Lc backfill builder",
+      "url": "https://github.com/OffchainLabs/prysm/pull/17731",
+      "state": "closed",
+      "createdAt": "2026-10-19T04:49:45Z",
+      "mergedAt": null,
+      "closedAt": "2026-10-19T04:50:11Z"
+    },
+    {
+      "repo": "apache/asyncband",
+      "number": 351,
+      "title": "refactor(rwlock): move guard permits into access tokens",
+      "url": "https://github.com/apache/asyncband/pull/351",
+      "state": "merged",
+      "createdAt": "2026-10-05T18:46:59Z",
+      "mergedAt": "2026-10-10T02:41:18Z",
+      "closedAt": "2026-10-10T02:41:18Z"
+    },
+    {
+      "repo": "flyteorg/flyte",
+      "number": 8116,
+      "title": "feat: Emit action events as Kubernetes Events",
+      "url": "https://github.com/flyteorg/flyte/pull/8116",
+      "state": "merged",
+      "createdAt": "2026-10-03T12:10:42Z",
+      "mergedAt": "2026-11-25T01:23:40Z",
+      "closedAt": "2026-11-25T01:23:40Z"
+    },
+    {
+      "repo": "OffchainLabs/prysm",
+      "number": 17521,
+      "title": "Feat: Lc backfill data type",
+      "url": "https://github.com/OffchainLabs/prysm/pull/17521",
+      "state": "open",
+      "createdAt": "2026-09-19T08:37:26Z",
+      "mergedAt": null,
+      "closedAt": null
+    },
+    {
+      "repo": "apache/datasketches-rust",
+      "number": 264,
+      "title": "refactor: remove the rand runtime dependency and add common random bit function",
+      "url": "https://github.com/apache/datasketches-rust/pull/264",
+      "state": "merged",
+      "createdAt": "2026-09-02T09:29:52Z",
+      "mergedAt": "2026-09-02T13:59:22Z",
+      "closedAt": "2026-09-02T13:59:22Z"
+    },
+    {
+      "repo": "eth-protocol-fellows/cohort-seven",
+      "number": 378,
+      "title": "update jeff week 10 and 11",
+      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/378",
+      "state": "merged",
+      "createdAt": "2026-08-31T15:45:35Z",
+      "mergedAt": "2026-09-02T09:40:54Z",
+      "closedAt": "2026-09-02T09:40:54Z"
+    },
+    {
+      "repo": "apache/datasketches-rust",
+      "number": 248,
+      "title": "feat: Implement KLLSketch",
+      "url": "https://github.com/apache/datasketches-rust/pull/248",
+      "state": "merged",
+      "createdAt": "2026-08-30T14:37:11Z",
+      "mergedAt": "2026-09-02T03:59:41Z",
+      "closedAt": "2026-09-02T03:59:41Z"
+    },
+    {
+      "repo": "flyteorg/flyte-sdk",
+      "number": 1508,
+      "title": "fix(code-bundle): rebuild after source changes",
+      "url": "https://github.com/flyteorg/flyte-sdk/pull/1508",
+      "state": "merged",
+      "createdAt": "2026-08-30T09:44:38Z",
+      "mergedAt": "2026-09-02T17:58:06Z",
+      "closedAt": "2026-09-02T17:58:06Z"
+    },
+    {
+      "repo": "apache/datasketches-rust",
+      "number": 220,
+      "title": "fix: compactor merge",
+      "url": "https://github.com/apache/datasketches-rust/pull/220",
+      "state": "merged",
+      "createdAt": "2026-08-25T07:49:25Z",
+      "mergedAt": "2026-08-25T09:19:14Z",
+      "closedAt": "2026-08-25T09:19:14Z"
+    },
+    {
+      "repo": "eth-protocol-fellows/cohort-seven",
+      "number": 326,
+      "title": "feat: update week 6-8",
+      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/326",
+      "state": "merged",
+      "createdAt": "2026-08-14T10:10:10Z",
+      "mergedAt": "2026-08-14T11:49:23Z",
+      "closedAt": "2026-08-14T11:49:23Z"
+    },
+    {
+      "repo": "eth-protocol-fellows/cohort-seven",
+      "number": 322,
+      "title": "prysm light client backfill proposal",
+      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/322",
+      "state": "merged",
+      "createdAt": "2026-08-12T14:27:36Z",
+      "mergedAt": "2026-10-14T19:21:37Z",
+      "closedAt": "2026-10-14T19:21:37Z"
+    },
+    {
+      "repo": "eth-protocol-fellows/cohort-seven",
+      "number": 223,
+      "title": "Jeff week4 and 5 update",
+      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/223",
+      "state": "merged",
+      "createdAt": "2026-07-20T15:22:25Z",
+      "mergedAt": "2026-07-21T14:29:09Z",
+      "closedAt": "2026-07-21T14:29:09Z"
+    },
+    {
+      "repo": "eth-protocol-fellows/cohort-seven",
+      "number": 149,
+      "title": "update week 3",
+      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/149",
+      "state": "merged",
+      "createdAt": "2026-07-07T10:16:19Z",
+      "mergedAt": "2026-07-07T10:34:39Z",
+      "closedAt": "2026-07-07T10:34:39Z"
+    },
+    {
+      "repo": "ReamLabs/leanstart",
+      "number": 6,
+      "title": "fix: update installation script url",
+      "url": "https://github.com/ReamLabs/leanstart/pull/6",
+      "state": "open",
+      "createdAt": "2026-07-07T05:35:59Z",
+      "mergedAt": null,
+      "closedAt": null
+    },
+    {
+      "repo": "eth-protocol-fellows/cohort-seven",
+      "number": 107,
+      "title": "update jeff week 2",
+      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/107",
+      "state": "merged",
+      "createdAt": "2026-06-29T07:45:28Z",
+      "mergedAt": "2026-06-30T05:46:41Z",
+      "closedAt": "2026-06-30T05:46:42Z"
+    },
+    {
+      "repo": "eth-protocol-fellows/cohort-seven",
+      "number": 75,
+      "title": "update week 1",
+      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/75",
+      "state": "merged",
+      "createdAt": "2026-06-22T15:24:34Z",
+      "mergedAt": "2026-06-25T13:30:30Z",
+      "closedAt": "2026-06-25T13:30:30Z"
+    },
+    {
+      "repo": "eth-protocol-fellows/cohort-seven",
+      "number": 44,
+      "title": "Add week 0 dev update for jeff chung",
+      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/44",
+      "state": "merged",
+      "createdAt": "2026-06-15T17:36:28Z",
+      "mergedAt": "2026-06-17T09:04:13Z",
+      "closedAt": "2026-06-17T09:04:13Z"
+    },
+    {
+      "repo": "william00646-cloud/Podcast2Notebook",
+      "number": 1,
+      "title": "Async pipeline, AI transcript correction, Google Drive OAuth, redesigned UI, and Docker",
+      "url": "https://github.com/william00646-cloud/Podcast2Notebook/pull/1",
+      "state": "merged",
+      "createdAt": "2026-05-17T12:54:02Z",
+      "mergedAt": "2026-05-17T13:24:03Z",
+      "closedAt": "2026-05-17T13:24:03Z"
+    },
+    {
+      "repo": "ChainSafe/zig-discv5",
+      "number": 2,
+      "title": "fix(small_buf_map): use *const Self for read methods to avoid use-after-stack-free",
+      "url": "https://github.com/ChainSafe/zig-discv5/pull/2",
+      "state": "open",
+      "createdAt": "2026-05-08T07:13:53Z",
+      "mergedAt": null,
+      "closedAt": null
+    },
+    {
+      "repo": "ChainSafe/lodestar",
+      "number": 9326,
+      "title": "refactor: avoid ancestor walk when pruning payload envelope inputs",
+      "url": "https://github.com/ChainSafe/lodestar/pull/9326",
+      "state": "merged",
+      "createdAt": "2026-05-05T05:24:19Z",
+      "mergedAt": "2026-10-03T09:00:49Z",
+      "closedAt": "2026-10-03T09:00:49Z"
+    },
+    {
+      "repo": "stephanieperng/Hamster-Game",
+      "number": 1,
+      "title": "Modular refactor + 18 feature iterations",
+      "url": "https://github.com/stephanieperng/Hamster-Game/pull/1",
+      "state": "open",
+      "createdAt": "2026-05-02T03:56:43Z",
+      "mergedAt": null,
+      "closedAt": null
+    },
+    {
+      "repo": "zen-eth/eth-p2p-z",
+      "number": 124,
+      "title": "refactor: migrate lsquic to lsquic_zig.",
+      "url": "https://github.com/zen-eth/eth-p2p-z/pull/124",
+      "state": "draft",
+      "createdAt": "2026-04-27T08:46:13Z",
+      "mergedAt": null,
+      "closedAt": null
+    },
+    {
+      "repo": "ChainSafe/lodestar",
+      "number": 9238,
+      "title": "feat: backfill sync v2",
+      "url": "https://github.com/ChainSafe/lodestar/pull/9238",
+      "state": "closed",
+      "createdAt": "2026-04-20T09:51:35Z",
+      "mergedAt": null,
+      "closedAt": "2026-10-02T19:37:43Z"
+    },
+    {
+      "repo": "ChainSafe/lodestar-z",
+      "number": 249,
+      "title": "feat(bls): adding fuzz test for bls",
+      "url": "https://github.com/ChainSafe/lodestar-z/pull/249",
+      "state": "merged",
+      "createdAt": "2026-03-18T10:33:46Z",
+      "mergedAt": "2026-03-30T14:16:28Z",
+      "closedAt": "2026-03-30T14:16:28Z"
+    },
+    {
+      "repo": "ChainSafe/blst-z",
+      "number": 59,
+      "title": "adding fuzz tests",
+      "url": "https://github.com/ChainSafe/blst-z/pull/59",
+      "state": "closed",
+      "createdAt": "2026-03-03T06:37:07Z",
+      "mergedAt": null,
+      "closedAt": "2026-03-26T13:31:08Z"
+    },
+    {
+      "repo": "ChainSafe/lodestar-z",
+      "number": 197,
+      "title": "feat: binding more getters and methods",
+      "url": "https://github.com/ChainSafe/lodestar-z/pull/197",
+      "state": "merged",
+      "createdAt": "2026-01-27T15:18:32Z",
+      "mergedAt": "2026-01-29T18:46:38Z",
+      "closedAt": "2026-01-29T18:46:39Z"
+    },
+    {
+      "repo": "ChainSafe/lodestar-z",
+      "number": 196,
+      "title": "feat: clock module",
+      "url": "https://github.com/ChainSafe/lodestar-z/pull/196",
+      "state": "closed",
+      "createdAt": "2026-01-27T10:05:33Z",
+      "mergedAt": null,
+      "closedAt": "2026-02-24T10:23:19Z"
+    },
+    {
+      "repo": "ChainSafe/lodestar-z",
+      "number": 182,
+      "title": "feat: binding beaconStateView getters",
+      "url": "https://github.com/ChainSafe/lodestar-z/pull/182",
+      "state": "merged",
+      "createdAt": "2026-01-20T13:51:52Z",
+      "mergedAt": "2026-01-28T03:59:39Z",
+      "closedAt": "2026-01-28T03:59:39Z"
+    },
+    {
+      "repo": "ChainSafe/lodestar-z",
+      "number": 174,
+      "title": "feat: napi with `innerShuffleList`",
+      "url": "https://github.com/ChainSafe/lodestar-z/pull/174",
+      "state": "merged",
+      "createdAt": "2026-01-16T09:39:40Z",
+      "mergedAt": "2026-01-22T04:32:38Z",
+      "closedAt": "2026-01-22T04:32:38Z"
+    },
+    {
+      "repo": "tokamak-network/syb-circuits",
+      "number": 10,
+      "title": "Feat/hash input",
+      "url": "https://github.com/tokamak-network/syb-circuits/pull/10",
+      "state": "open",
+      "createdAt": "2025-12-24T03:16:09Z",
+      "mergedAt": null,
+      "closedAt": null
+    },
+    {
+      "repo": "tokamak-network/syb-circuits",
+      "number": 9,
+      "title": "[WIP] Feat/set hash",
+      "url": "https://github.com/tokamak-network/syb-circuits/pull/9",
+      "state": "draft",
+      "createdAt": "2025-12-22T05:37:02Z",
+      "mergedAt": null,
+      "closedAt": null
+    },
+    {
+      "repo": "ChainSafe/lodestar-z",
+      "number": 122,
+      "title": "Feat/blinded block header tests",
+      "url": "https://github.com/ChainSafe/lodestar-z/pull/122",
+      "state": "closed",
+      "createdAt": "2025-12-09T13:42:58Z",
+      "mergedAt": null,
+      "closedAt": "2026-02-24T10:23:19Z"
+    },
+    {
+      "repo": "ChainSafe/lodestar-z",
+      "number": 116,
+      "title": "chore: deduplicate SignedBeaconBlockHeader and reuse the type from phase0",
+      "url": "https://github.com/ChainSafe/lodestar-z/pull/116",
+      "state": "merged",
+      "createdAt": "2025-12-06T08:38:58Z",
+      "mergedAt": "2025-12-07T08:16:22Z",
+      "closedAt": "2025-12-07T08:16:23Z"
+    },
+    {
+      "repo": "tokamak-network/syb-circuits",
+      "number": 8,
+      "title": "Feat/update nbr hash circuits",
+      "url": "https://github.com/tokamak-network/syb-circuits/pull/8",
+      "state": "closed",
+      "createdAt": "2025-12-03T08:59:30Z",
+      "mergedAt": null,
+      "closedAt": "2025-12-22T05:40:08Z"
+    },
+    {
+      "repo": "tokamak-network/syb-circuits",
+      "number": 7,
+      "title": "Feat/opt nbr hash",
+      "url": "https://github.com/tokamak-network/syb-circuits/pull/7",
+      "state": "closed",
+      "createdAt": "2025-12-01T06:07:37Z",
+      "mergedAt": null,
+      "closedAt": "2025-12-22T05:42:13Z"
+    },
+    {
+      "repo": "tokamak-network/syb-circuits",
+      "number": 6,
+      "title": "test: add nbr_hasher testing",
+      "url": "https://github.com/tokamak-network/syb-circuits/pull/6",
+      "state": "closed",
+      "createdAt": "2025-11-27T07:52:02Z",
+      "mergedAt": null,
+      "closedAt": "2025-12-22T05:42:30Z"
+    },
+    {
+      "repo": "tokamak-network/syb-circuits",
+      "number": 5,
+      "title": "fix: change node hasher to nbr hasher",
+      "url": "https://github.com/tokamak-network/syb-circuits/pull/5",
+      "state": "merged",
+      "createdAt": "2025-11-27T06:58:12Z",
+      "mergedAt": "2025-11-27T07:07:13Z",
+      "closedAt": "2025-11-27T07:07:13Z"
+    },
+    {
+      "repo": "blockblaz/zeam",
+      "number": 392,
+      "title": "feat: add keypair cache",
+      "url": "https://github.com/blockblaz/zeam/pull/392",
+      "state": "merged",
+      "createdAt": "2025-11-26T12:28:34Z",
+      "mergedAt": "2025-11-27T21:12:50Z",
+      "closedAt": "2025-11-27T21:12:50Z"
+    },
+    {
+      "repo": "tokamak-network/syb-circuits",
+      "number": 4,
+      "title": "feat: add build and test into ci",
+      "url": "https://github.com/tokamak-network/syb-circuits/pull/4",
+      "state": "merged",
+      "createdAt": "2025-11-25T07:08:45Z",
+      "mergedAt": "2025-11-26T04:29:58Z",
+      "closedAt": "2025-11-26T04:29:58Z"
+    },
+    {
+      "repo": "tokamak-network/syb-circuits",
+      "number": 2,
+      "title": "Feat/add plonk verifier",
+      "url": "https://github.com/tokamak-network/syb-circuits/pull/2",
+      "state": "open",
+      "createdAt": "2025-11-20T07:26:24Z",
+      "mergedAt": null,
+      "closedAt": null
+    },
+    {
+      "repo": "tokamak-network/syb-circuits",
+      "number": 1,
+      "title": "Remove generated files and update .gitignore to exclude build artifacts",
+      "url": "https://github.com/tokamak-network/syb-circuits/pull/1",
+      "state": "merged",
+      "createdAt": "2025-11-20T07:12:42Z",
+      "mergedAt": "2025-11-20T07:17:35Z",
+      "closedAt": "2025-11-20T07:17:35Z"
+    },
+    {
+      "repo": "tokamak-network/Tokamak-zk-EVM",
+      "number": 130,
+      "title": "[WIP] Refactor/cleanup libs structures",
+      "url": "https://github.com/tokamak-network/Tokamak-zk-EVM/pull/130",
+      "state": "closed",
+      "createdAt": "2025-10-29T06:49:24Z",
+      "mergedAt": null,
+      "closedAt": "2025-11-20T15:08:36Z"
+    },
+    {
+      "repo": "tokamak-network/syb-jupyter-notebooks",
+      "number": 6,
+      "title": "Feat/user mode",
+      "url": "https://github.com/tokamak-network/syb-jupyter-notebooks/pull/6",
+      "state": "open",
+      "createdAt": "2025-10-22T07:54:59Z",
+      "mergedAt": null,
+      "closedAt": null
+    },
+    {
+      "repo": "tokamak-network/tokamak-sybil-resistance",
+      "number": 79,
+      "title": "Feat/circuit/add test",
+      "url": "https://github.com/tokamak-network/tokamak-sybil-resistance/pull/79",
+      "state": "closed",
+      "createdAt": "2025-10-14T08:12:19Z",
+      "mergedAt": null,
+      "closedAt": "2025-10-14T08:26:25Z"
+    },
+    {
+      "repo": "tokamak-network/syb-jupyter-notebooks",
+      "number": 5,
+      "title": "feat: create network class and add dev mode",
+      "url": "https://github.com/tokamak-network/syb-jupyter-notebooks/pull/5",
+      "state": "closed",
+      "createdAt": "2025-09-25T02:27:55Z",
+      "mergedAt": null,
+      "closedAt": "2025-10-22T07:47:04Z"
+    },
+    {
+      "repo": "tokamak-network/tokamak-sybil-resistance",
+      "number": 78,
+      "title": "Feat/prove score merkle proof in snark proof",
+      "url": "https://github.com/tokamak-network/tokamak-sybil-resistance/pull/78",
+      "state": "closed",
+      "createdAt": "2025-09-23T10:06:17Z",
+      "mergedAt": null,
+      "closedAt": "2025-10-14T08:26:13Z"
+    },
+    {
+      "repo": "tokamak-network/Tokamak-zk-EVM",
+      "number": 122,
+      "title": "hot fix: remove json writing",
+      "url": "https://github.com/tokamak-network/Tokamak-zk-EVM/pull/122",
+      "state": "merged",
+      "createdAt": "2025-09-10T10:28:37Z",
+      "mergedAt": "2025-09-19T05:41:39Z",
+      "closedAt": "2025-09-19T05:41:39Z"
+    },
+    {
+      "repo": "tokamak-network/syb-jupyter-notebooks",
+      "number": 4,
+      "title": "Feat/dev mode",
+      "url": "https://github.com/tokamak-network/syb-jupyter-notebooks/pull/4",
+      "state": "closed",
+      "createdAt": "2025-09-10T03:05:00Z",
+      "mergedAt": null,
+      "closedAt": "2025-10-22T07:47:19Z"
+    },
+    {
+      "repo": "tokamak-network/Tokamak-zk-EVM",
+      "number": 118,
+      "title": "Feat/jeff opt vecops",
+      "url": "https://github.com/tokamak-network/Tokamak-zk-EVM/pull/118",
+      "state": "merged",
+      "createdAt": "2025-09-05T05:12:28Z",
+      "mergedAt": "2025-09-10T09:09:31Z",
+      "closedAt": "2025-09-10T09:09:31Z"
+    },
+    {
+      "repo": "tokamak-network/tokamak-rollup-metadata-repository",
+      "number": 36,
+      "title": "[Rollup] sepolia 0xb1c9292d00aba877f6fcf2139249b71c60c6f54e - foodchain",
+      "url": "https://github.com/tokamak-network/tokamak-rollup-metadata-repository/pull/36",
+      "state": "merged",
+      "createdAt": "2025-09-02T16:36:01Z",
+      "mergedAt": "2025-09-03T06:54:13Z",
+      "closedAt": "2025-09-03T06:54:13Z"
+    },
+    {
+      "repo": "tokamak-network/syb-jupyter-notebooks",
+      "number": 3,
+      "title": "Feat/improve building process",
+      "url": "https://github.com/tokamak-network/syb-jupyter-notebooks/pull/3",
+      "state": "merged",
+      "createdAt": "2025-09-01T06:35:13Z",
+      "mergedAt": "2025-09-01T06:38:25Z",
+      "closedAt": "2025-09-01T06:38:25Z"
+    },
+    {
+      "repo": "tokamak-network/Tokamak-zk-EVM",
+      "number": 115,
+      "title": "Backend Optimizations",
+      "url": "https://github.com/tokamak-network/Tokamak-zk-EVM/pull/115",
+      "state": "merged",
+      "createdAt": "2025-08-28T13:33:32Z",
+      "mergedAt": "2025-08-29T07:13:40Z",
+      "closedAt": "2025-08-29T07:13:40Z"
+    },
+    {
+      "repo": "tokamak-network/syb-jupyter-notebooks",
+      "number": 1,
+      "title": "Fix/issue solving",
+      "url": "https://github.com/tokamak-network/syb-jupyter-notebooks/pull/1",
+      "state": "merged",
+      "createdAt": "2025-08-27T06:51:59Z",
+      "mergedAt": "2025-08-27T06:58:57Z",
+      "closedAt": "2025-08-27T06:58:57Z"
+    },
+    {
+      "repo": "zen-eth/lsquic",
+      "number": 3,
+      "title": "chore: add ci and fix some trivial problem",
+      "url": "https://github.com/zen-eth/lsquic/pull/3",
+      "state": "open",
+      "createdAt": "2025-08-03T03:58:41Z",
+      "mergedAt": null,
+      "closedAt": null
+    },
+    {
+      "repo": "zen-eth/eth-p2p-z",
+      "number": 40,
+      "title": "fix: update libxev version",
+      "url": "https://github.com/zen-eth/eth-p2p-z/pull/40",
+      "state": "merged",
+      "createdAt": "2025-07-24T07:09:06Z",
+      "mergedAt": "2025-07-24T08:35:42Z",
+      "closedAt": "2025-07-24T08:35:42Z"
+    },
+    {
+      "repo": "beBit-tech/pretest",
+      "number": 36,
+      "title": "鍾富全(Jeff) - 面試",
+      "url": "https://github.com/beBit-tech/pretest/pull/36",
+      "state": "closed",
+      "createdAt": "2025-06-03T14:43:29Z",
+      "mergedAt": null,
+      "closedAt": "2025-09-11T09:51:51Z"
+    },
+    {
+      "repo": "Splix-ethtaipei/Splix-indexer-api",
+      "number": 1,
+      "title": "Add relay transaction API for Circle attestations and cross-chain mes…",
+      "url": "https://github.com/Splix-ethtaipei/Splix-indexer-api/pull/1",
+      "state": "merged",
+      "createdAt": "2025-04-05T18:16:54Z",
+      "mergedAt": "2025-04-05T18:17:04Z",
+      "closedAt": "2025-04-05T18:17:04Z"
+    },
+    {
+      "repo": "Splix-ethtaipei/splix-frontend",
+      "number": 6,
+      "title": "Pay cctp normal one",
+      "url": "https://github.com/Splix-ethtaipei/splix-frontend/pull/6",
+      "state": "merged",
+      "createdAt": "2025-04-05T18:01:26Z",
+      "mergedAt": "2025-04-05T18:01:31Z",
+      "closedAt": "2025-04-05T18:01:31Z"
+    },
+    {
+      "repo": "zkmopro/gpu-acceleration",
+      "number": 63,
+      "title": "Refactor/move helper structures to utils",
+      "url": "https://github.com/zkmopro/gpu-acceleration/pull/63",
+      "state": "merged",
+      "createdAt": "2025-03-16T08:14:12Z",
+      "mergedAt": "2025-03-16T11:17:47Z",
+      "closedAt": "2025-03-16T11:17:47Z"
+    },
+    {
+      "repo": "zkmopro/gpu-acceleration",
+      "number": 56,
+      "title": "feat: add big int as input for pbpr",
+      "url": "https://github.com/zkmopro/gpu-acceleration/pull/56",
+      "state": "merged",
+      "createdAt": "2025-03-12T06:15:48Z",
+      "mergedAt": "2025-03-12T07:50:04Z",
+      "closedAt": "2025-03-12T07:50:04Z"
+    },
+    {
+      "repo": "zkmopro/gpu-acceleration",
+      "number": 52,
+      "title": "Feat/cuzk/new bucket point reduction",
+      "url": "https://github.com/zkmopro/gpu-acceleration/pull/52",
+      "state": "merged",
+      "createdAt": "2025-03-03T19:29:44Z",
+      "mergedAt": "2025-03-05T08:24:11Z",
+      "closedAt": "2025-03-05T08:24:11Z"
+    },
+    {
+      "repo": "zkmopro/gpu-acceleration",
+      "number": 43,
+      "title": "Feat/cuzk/bucket point reduction",
+      "url": "https://github.com/zkmopro/gpu-acceleration/pull/43",
+      "state": "closed",
+      "createdAt": "2025-02-13T12:15:43Z",
+      "mergedAt": null,
+      "closedAt": "2025-03-03T19:30:44Z"
+    },
+    {
+      "repo": "zkmopro/gpu-acceleration",
+      "number": 38,
+      "title": "Feat/curve/jacobian scalar mul",
+      "url": "https://github.com/zkmopro/gpu-acceleration/pull/38",
+      "state": "merged",
+      "createdAt": "2025-01-17T02:19:57Z",
+      "mergedAt": "2025-01-17T04:04:58Z",
+      "closedAt": "2025-01-17T04:04:58Z"
+    },
+    {
+      "repo": "zkmopro/gpu-acceleration",
+      "number": 35,
+      "title": "fix: add `#pragma once` as the header guard to prevent redefinition error",
+      "url": "https://github.com/zkmopro/gpu-acceleration/pull/35",
+      "state": "merged",
+      "createdAt": "2025-01-09T08:24:21Z",
+      "mergedAt": "2025-01-09T10:14:43Z",
+      "closedAt": "2025-01-09T10:14:43Z"
+    },
+    {
+      "repo": "zkmopro/gpu-acceleration",
+      "number": 28,
+      "title": "Doc/add license",
+      "url": "https://github.com/zkmopro/gpu-acceleration/pull/28",
+      "state": "merged",
+      "createdAt": "2025-01-01T05:34:00Z",
+      "mergedAt": "2025-01-02T02:08:38Z",
+      "closedAt": "2025-01-02T02:08:38Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 487,
+      "title": "fix: change reportId to public input",
+      "url": "https://github.com/social-tw/social-tw-website/pull/487",
+      "state": "merged",
+      "createdAt": "2024-08-25T18:34:41Z",
+      "mergedAt": "2024-08-28T08:40:49Z",
+      "closedAt": "2024-08-28T08:40:49Z"
+    },
+    {
+      "repo": "uog-zkp-lab/zk-server",
+      "number": 2,
+      "title": "Implement server",
+      "url": "https://github.com/uog-zkp-lab/zk-server/pull/2",
+      "state": "merged",
+      "createdAt": "2024-08-19T19:10:42Z",
+      "mergedAt": "2024-08-19T19:12:19Z",
+      "closedAt": "2024-08-19T19:12:19Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 464,
+      "title": "Fix/claim rep problem",
+      "url": "https://github.com/social-tw/social-tw-website/pull/464",
+      "state": "merged",
+      "createdAt": "2024-08-06T16:51:52Z",
+      "mergedAt": "2024-08-08T04:28:39Z",
+      "closedAt": "2024-08-08T04:28:39Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 459,
+      "title": "Fix/change reporter claiming mechanism",
+      "url": "https://github.com/social-tw/social-tw-website/pull/459",
+      "state": "merged",
+      "createdAt": "2024-07-29T21:33:41Z",
+      "mergedAt": "2024-08-06T04:30:40Z",
+      "closedAt": "2024-08-06T04:30:40Z"
+    },
+    {
+      "repo": "zkmopro/mopro",
+      "number": 221,
+      "title": "Feat/integrate gpu acceleration",
+      "url": "https://github.com/zkmopro/mopro/pull/221",
+      "state": "closed",
+      "createdAt": "2024-07-22T20:27:25Z",
+      "mergedAt": null,
+      "closedAt": "2024-08-13T14:26:35Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 438,
+      "title": "[Contract] Feat/contract claim neg rep",
+      "url": "https://github.com/social-tw/social-tw-website/pull/438",
+      "state": "merged",
+      "createdAt": "2024-07-11T14:07:35Z",
+      "mergedAt": "2024-07-12T09:14:00Z",
+      "closedAt": "2024-07-12T09:14:01Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 430,
+      "title": "Chore/add data in circuit public signal",
+      "url": "https://github.com/social-tw/social-tw-website/pull/430",
+      "state": "merged",
+      "createdAt": "2024-07-06T13:10:21Z",
+      "mergedAt": "2024-07-06T13:24:04Z",
+      "closedAt": "2024-07-06T13:24:04Z"
+    },
+    {
+      "repo": "zkmopro/gpu-acceleration",
+      "number": 4,
+      "title": "init: isolated all the msm out of mopro-core and make it a crate",
+      "url": "https://github.com/zkmopro/gpu-acceleration/pull/4",
+      "state": "merged",
+      "createdAt": "2024-07-03T10:25:46Z",
+      "mergedAt": "2024-07-04T13:36:21Z",
+      "closedAt": "2024-07-04T13:36:21Z"
+    },
+    {
+      "repo": "uog-zkp-lab/zk-abe-backend",
+      "number": 1,
+      "title": "Experiment Policy and Merkle Root",
+      "url": "https://github.com/uog-zkp-lab/zk-abe-backend/pull/1",
+      "state": "merged",
+      "createdAt": "2024-07-01T18:59:31Z",
+      "mergedAt": "2024-07-04T12:12:16Z",
+      "closedAt": "2024-07-04T12:12:16Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 420,
+      "title": "chore: Update variable name from `post_id` to `report_id` in `reportN…",
+      "url": "https://github.com/social-tw/social-tw-website/pull/420",
+      "state": "closed",
+      "createdAt": "2024-06-28T09:55:07Z",
+      "mergedAt": null,
+      "closedAt": "2024-07-06T13:10:29Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 406,
+      "title": "[Report][Circuit][Contract] add verifier manager",
+      "url": "https://github.com/social-tw/social-tw-website/pull/406",
+      "state": "merged",
+      "createdAt": "2024-06-23T23:15:25Z",
+      "mergedAt": "2024-07-04T14:49:09Z",
+      "closedAt": "2024-07-04T14:49:09Z"
+    },
+    {
+      "repo": "uog-zkp-lab/zk-abe-client",
+      "number": 1,
+      "title": "Feat/adding navigations",
+      "url": "https://github.com/uog-zkp-lab/zk-abe-client/pull/1",
+      "state": "merged",
+      "createdAt": "2024-06-20T14:46:27Z",
+      "mergedAt": "2024-06-20T18:02:25Z",
+      "closedAt": "2024-06-20T18:02:25Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 401,
+      "title": "[Circuit][Report] Feat/report negative circuit",
+      "url": "https://github.com/social-tw/social-tw-website/pull/401",
+      "state": "merged",
+      "createdAt": "2024-06-20T12:50:48Z",
+      "mergedAt": "2024-06-24T12:49:05Z",
+      "closedAt": "2024-06-24T12:49:05Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 396,
+      "title": "[Circuit][Report] Feat/report positive circuit",
+      "url": "https://github.com/social-tw/social-tw-website/pull/396",
+      "state": "merged",
+      "createdAt": "2024-06-19T23:02:32Z",
+      "mergedAt": "2024-06-23T16:05:20Z",
+      "closedAt": "2024-06-23T16:05:20Z"
+    },
+    {
+      "repo": "zkmopro/mopro",
+      "number": 156,
+      "title": "Integrate metal msm in ios",
+      "url": "https://github.com/zkmopro/mopro/pull/156",
+      "state": "closed",
+      "createdAt": "2024-06-11T15:08:45Z",
+      "mergedAt": null,
+      "closedAt": "2024-07-01T07:46:56Z"
+    },
+    {
+      "repo": "zkmopro/mopro",
+      "number": 150,
+      "title": "Feat/Msm with gpu (metal shader language) on laptop",
+      "url": "https://github.com/zkmopro/mopro/pull/150",
+      "state": "merged",
+      "createdAt": "2024-06-02T23:21:27Z",
+      "mergedAt": "2024-06-08T03:15:35Z",
+      "closedAt": "2024-06-08T03:15:35Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 369,
+      "title": "[Contract][Relay] fix: Update IPFS content handling (from content to cid)",
+      "url": "https://github.com/social-tw/social-tw-website/pull/369",
+      "state": "merged",
+      "createdAt": "2024-05-24T07:37:03Z",
+      "mergedAt": "2024-06-06T23:35:36Z",
+      "closedAt": "2024-06-06T23:35:36Z"
+    },
+    {
+      "repo": "g0v/nobody",
+      "number": 22,
+      "title": "Add member jeff",
+      "url": "https://github.com/g0v/nobody/pull/22",
+      "state": "closed",
+      "createdAt": "2024-05-21T15:00:45Z",
+      "mergedAt": null,
+      "closedAt": "2024-09-21T01:55:32Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 359,
+      "title": "Fix/modify relay comment test",
+      "url": "https://github.com/social-tw/social-tw-website/pull/359",
+      "state": "merged",
+      "createdAt": "2024-05-15T10:25:10Z",
+      "mergedAt": "2024-05-19T07:50:09Z",
+      "closedAt": "2024-05-19T07:50:09Z"
+    },
+    {
+      "repo": "zkmopro/mopro",
+      "number": 137,
+      "title": "Integrating gpu exploration app",
+      "url": "https://github.com/zkmopro/mopro/pull/137",
+      "state": "merged",
+      "createdAt": "2024-05-14T14:46:24Z",
+      "mergedAt": "2024-05-19T01:24:23Z",
+      "closedAt": "2024-05-19T01:24:23Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 341,
+      "title": "Doc/contract readme updating",
+      "url": "https://github.com/social-tw/social-tw-website/pull/341",
+      "state": "merged",
+      "createdAt": "2024-05-09T19:56:44Z",
+      "mergedAt": "2024-05-10T07:52:23Z",
+      "closedAt": "2024-05-10T07:52:23Z"
+    },
+    {
+      "repo": "zkmopro/mopro",
+      "number": 128,
+      "title": "feat(msm-gpu-exploration): integrate zprize msm",
+      "url": "https://github.com/zkmopro/mopro/pull/128",
+      "state": "merged",
+      "createdAt": "2024-04-15T23:46:11Z",
+      "mergedAt": "2024-04-19T10:08:36Z",
+      "closedAt": "2024-04-19T10:08:36Z"
+    },
+    {
+      "repo": "zkmopro/mopro",
+      "number": 71,
+      "title": "feat(ios): added basic UI in MSM Benchmark",
+      "url": "https://github.com/zkmopro/mopro/pull/71",
+      "state": "merged",
+      "createdAt": "2024-02-13T21:48:31Z",
+      "mergedAt": "2024-02-22T10:22:24Z",
+      "closedAt": "2024-02-22T10:22:24Z"
+    },
+    {
+      "repo": "zkmopro/mopro",
+      "number": 56,
+      "title": "feat(core,ffi): Add Swift tests for MSM benchmarking",
+      "url": "https://github.com/zkmopro/mopro/pull/56",
+      "state": "merged",
+      "createdAt": "2024-01-23T09:53:50Z",
+      "mergedAt": "2024-02-13T02:20:21Z",
+      "closedAt": "2024-02-13T02:20:21Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 266,
+      "title": "[Fix] [Contracts] delete state tree root check",
+      "url": "https://github.com/social-tw/social-tw-website/pull/266",
+      "state": "merged",
+      "createdAt": "2024-01-17T14:27:28Z",
+      "mergedAt": "2024-01-18T02:45:19Z",
+      "closedAt": "2024-01-18T02:45:19Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 264,
+      "title": "[Fix] [Contract] rewrite test descriptions",
+      "url": "https://github.com/social-tw/social-tw-website/pull/264",
+      "state": "merged",
+      "createdAt": "2024-01-17T12:09:07Z",
+      "mergedAt": "2024-01-19T14:19:40Z",
+      "closedAt": "2024-01-19T14:19:40Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 250,
+      "title": "[Chore] [Relay] update .env.example for dev",
+      "url": "https://github.com/social-tw/social-tw-website/pull/250",
+      "state": "merged",
+      "createdAt": "2024-01-14T12:39:12Z",
+      "mergedAt": "2024-01-14T14:50:54Z",
+      "closedAt": "2024-01-14T14:50:54Z"
+    },
+    {
+      "repo": "zkmopro/mopro",
+      "number": 53,
+      "title": "feat(benchmarks): msm-benchmarking tooling construction",
+      "url": "https://github.com/zkmopro/mopro/pull/53",
+      "state": "merged",
+      "createdAt": "2024-01-12T13:07:55Z",
+      "mergedAt": "2024-01-17T05:28:01Z",
+      "closedAt": "2024-01-17T05:28:01Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 247,
+      "title": "[Fix] [Contract] convert post id in global",
+      "url": "https://github.com/social-tw/social-tw-website/pull/247",
+      "state": "merged",
+      "createdAt": "2024-01-10T15:23:56Z",
+      "mergedAt": "2024-01-14T14:30:59Z",
+      "closedAt": "2024-01-14T14:30:59Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 241,
+      "title": "Fix/contract comment test/type error",
+      "url": "https://github.com/social-tw/social-tw-website/pull/241",
+      "state": "merged",
+      "createdAt": "2024-01-10T09:01:50Z",
+      "mergedAt": "2024-01-10T09:25:43Z",
+      "closedAt": "2024-01-10T09:25:43Z"
+    },
+    {
+      "repo": "Unirep/Unirep",
+      "number": 562,
+      "title": "chore: Importing @types/snarkjs",
+      "url": "https://github.com/Unirep/Unirep/pull/562",
+      "state": "merged",
+      "createdAt": "2023-10-16T21:58:52Z",
+      "mergedAt": "2023-10-24T14:04:39Z",
+      "closedAt": "2023-10-24T14:04:39Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 134,
+      "title": "[feature] [comment] [contract] comment feature in contract",
+      "url": "https://github.com/social-tw/social-tw-website/pull/134",
+      "state": "merged",
+      "createdAt": "2023-10-05T14:23:17Z",
+      "mergedAt": "2023-11-08T13:39:16Z",
+      "closedAt": "2023-11-08T13:39:16Z"
+    },
+    {
+      "repo": "Unirep/Unirep",
+      "number": 551,
+      "title": "[WIP] importing `@types/snarkjs`",
+      "url": "https://github.com/Unirep/Unirep/pull/551",
+      "state": "closed",
+      "createdAt": "2023-09-30T19:57:28Z",
+      "mergedAt": null,
+      "closedAt": "2023-10-13T20:36:42Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 117,
+      "title": "[Fix] epkhelper checking",
+      "url": "https://github.com/social-tw/social-tw-website/pull/117",
+      "state": "merged",
+      "createdAt": "2023-09-27T22:58:12Z",
+      "mergedAt": "2023-10-04T13:50:43Z",
+      "closedAt": "2023-10-04T13:50:43Z"
+    },
+    {
+      "repo": "Unirep/Unirep",
+      "number": 543,
+      "title": "Update circuits to semaphore v4",
+      "url": "https://github.com/Unirep/Unirep/pull/543",
+      "state": "merged",
+      "createdAt": "2023-09-16T13:35:27Z",
+      "mergedAt": "2023-09-19T06:41:24Z",
+      "closedAt": "2023-09-19T06:41:24Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 89,
+      "title": "Fix/contract test timeout error",
+      "url": "https://github.com/social-tw/social-tw-website/pull/89",
+      "state": "closed",
+      "createdAt": "2023-09-12T20:27:12Z",
+      "mergedAt": null,
+      "closedAt": "2023-09-15T11:48:15Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 82,
+      "title": "Refactor update circuit version",
+      "url": "https://github.com/social-tw/social-tw-website/pull/82",
+      "state": "merged",
+      "createdAt": "2023-09-09T08:21:53Z",
+      "mergedAt": "2023-09-15T18:01:59Z",
+      "closedAt": "2023-09-15T18:01:59Z"
+    },
+    {
+      "repo": "Unirep/Unirep",
+      "number": 539,
+      "title": "Fix/circuit error fixing",
+      "url": "https://github.com/Unirep/Unirep/pull/539",
+      "state": "closed",
+      "createdAt": "2023-09-04T10:44:42Z",
+      "mergedAt": null,
+      "closedAt": "2023-09-04T10:46:03Z"
+    },
+    {
+      "repo": "Unirep/Unirep",
+      "number": 537,
+      "title": "Update circuits version",
+      "url": "https://github.com/Unirep/Unirep/pull/537",
+      "state": "merged",
+      "createdAt": "2023-08-31T09:41:43Z",
+      "mergedAt": "2023-09-07T06:17:46Z",
+      "closedAt": "2023-09-07T06:17:46Z"
+    },
+    {
+      "repo": "social-tw/social-tw-website",
+      "number": 39,
+      "title": "[Test] test: post smart contract",
+      "url": "https://github.com/social-tw/social-tw-website/pull/39",
+      "state": "merged",
+      "createdAt": "2023-08-21T12:21:26Z",
+      "mergedAt": "2023-08-31T13:37:57Z",
+      "closedAt": "2023-08-31T13:37:57Z"
+    },
+    {
+      "repo": "SWF-Lab/DappChef-ProblemsDB",
+      "number": 8,
+      "title": "Fc todo",
+      "url": "https://github.com/SWF-Lab/DappChef-ProblemsDB/pull/8",
+      "state": "closed",
+      "createdAt": "2023-04-01T13:31:14Z",
+      "mergedAt": null,
+      "closedAt": "2024-02-07T17:19:08Z"
+    },
+    {
+      "repo": "SWF-Lab/DappChef-ProblemsDB",
+      "number": 7,
+      "title": "Fc problems",
+      "url": "https://github.com/SWF-Lab/DappChef-ProblemsDB/pull/7",
+      "state": "merged",
+      "createdAt": "2023-03-18T19:37:20Z",
+      "mergedAt": "2023-03-19T05:05:27Z",
+      "closedAt": "2023-03-19T05:05:27Z"
+    },
+    {
+      "repo": "SWF-Lab/DappChef-ProblemsDB",
+      "number": 3,
+      "title": "Fc problems",
+      "url": "https://github.com/SWF-Lab/DappChef-ProblemsDB/pull/3",
+      "state": "merged",
+      "createdAt": "2023-03-02T08:53:42Z",
+      "mergedAt": "2023-03-02T14:45:35Z",
+      "closedAt": "2023-03-02T14:45:35Z"
+    },
+    {
+      "repo": "SWF-Lab/DappChef-Core-Contract",
+      "number": 5,
+      "title": "Fc-test",
+      "url": "https://github.com/SWF-Lab/DappChef-Core-Contract/pull/5",
+      "state": "merged",
+      "createdAt": "2023-02-20T16:49:03Z",
+      "mergedAt": "2023-02-21T01:35:26Z",
+      "closedAt": "2023-02-21T01:35:27Z"
+    },
+    {
+      "repo": "SWF-Lab/DappChef-ProblemsDB",
+      "number": 1,
+      "title": "Fc-problems",
+      "url": "https://github.com/SWF-Lab/DappChef-ProblemsDB/pull/1",
+      "state": "merged",
+      "createdAt": "2023-02-09T17:27:20Z",
+      "mergedAt": "2023-02-09T17:41:49Z",
+      "closedAt": "2023-02-09T17:41:49Z"
+    },
+    {
+      "repo": "SWF-Lab/DappChef-Core-Contract",
+      "number": 2,
+      "title": "deleted nonce and add solving status",
+      "url": "https://github.com/SWF-Lab/DappChef-Core-Contract/pull/2",
+      "state": "merged",
+      "createdAt": "2023-02-07T06:12:22Z",
+      "mergedAt": "2023-02-07T07:09:34Z",
+      "closedAt": "2023-02-07T07:09:34Z"
+    },
+    {
+      "repo": "SWF-Lab/DappChef-Core-Contract",
+      "number": 1,
+      "title": "reward contract",
+      "url": "https://github.com/SWF-Lab/DappChef-Core-Contract/pull/1",
+      "state": "merged",
+      "createdAt": "2023-02-01T17:19:35Z",
+      "mergedAt": "2023-02-02T02:53:08Z",
+      "closedAt": "2023-02-02T02:53:08Z"
+    },
+    {
+      "repo": "SWF-Lab/Github-Breakdown",
+      "number": 3,
+      "title": "first commit of foodchain",
+      "url": "https://github.com/SWF-Lab/Github-Breakdown/pull/3",
+      "state": "merged",
+      "createdAt": "2023-01-01T18:32:26Z",
+      "mergedAt": "2023-01-01T18:33:39Z",
+      "closedAt": "2023-01-01T18:33:39Z"
+    },
+    {
+      "repo": "yuaanlin/nextjs.tw",
+      "number": 32,
+      "title": "updated `pages/learn/foundations/from-react-to-nextjs/next-steps.mdx`",
+      "url": "https://github.com/yuaanlin/nextjs.tw/pull/32",
+      "state": "merged",
+      "createdAt": "2022-09-05T16:58:32Z",
+      "mergedAt": "2022-09-06T02:20:46Z",
+      "closedAt": "2022-09-06T02:20:46Z"
+    }
+  ],
+  "tagline": "Pull requests I've opened to open-source projects."
+}
