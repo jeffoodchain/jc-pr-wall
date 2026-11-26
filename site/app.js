@@ -1,42 +1,21 @@
-const ICONS = {
-  // Drawn on a 16x16 grid with strokes; see .ic in style.css.
-  open: '<circle cx="4" cy="3.5" r="1.75"/><circle cx="4" cy="12.5" r="1.75"/><circle cx="12" cy="12.5" r="1.75"/><path d="M4 5.25v5.5M12 10.75V6.5a2 2 0 0 0-2-2H8M9.5 3 8 4.5 9.5 6"/>',
-  merged: '<circle cx="4" cy="3.5" r="1.75"/><circle cx="4" cy="12.5" r="1.75"/><circle cx="12" cy="8" r="1.75"/><path d="M4 5.25v5.5M4 5.25c0 2 2 2.75 4 2.75h2.25"/>',
-  closed: '<circle cx="4" cy="3.5" r="1.75"/><circle cx="4" cy="12.5" r="1.75"/><circle cx="12" cy="12.5" r="1.75"/><path d="M4 5.25v5.5M12 10.75V8M10.5 2.5l3 3M13.5 2.5l-3 3"/>',
-  draft: '<circle cx="4" cy="3.5" r="1.75"/><circle cx="4" cy="12.5" r="1.75"/><circle cx="12" cy="12.5" r="1.75"/><path d="M4 5.25v5.5M12 9v.01M12 6.5v.01M12 4v.01"/>',
-  star: '<path d="M8 1.75l1.9 3.85 4.25.62-3.08 3 .73 4.23L8 11.45l-3.8 2 .73-4.23-3.08-3 4.25-.62z"/>',
-};
-
-const LABEL = { merged: 'Merged', open: 'Open', closed: 'Closed', draft: 'Draft' };
-
-const LANG_COLORS = {
-  Go: '#00add8', Rust: '#dea584', TypeScript: '#3178c6', JavaScript: '#f1e05a', Python: '#3572a5',
-  Zig: '#ec915c', Solidity: '#aa6746', 'C++': '#f34b7d', C: '#555555', Cuda: '#3a4e3a', Swift: '#f05138',
-  Kotlin: '#a97bff', Java: '#b07219', Circom: '#707575', Shell: '#89e051', HTML: '#e34c26', CSS: '#563d7c',
-  Ruby: '#701516', Nix: '#7e7eff', 'Jupyter Notebook': '#da5b0b', Noir: '#2f1f49', Cairo: '#ff4a48',
-};
-
-const FILTERS = ['merged', 'open', 'closed'];
-const PREVIEW = 5;
+const STATUSES = [
+  { key: 'all', label: 'All' },
+  { key: 'merged', label: 'Merged' },
+  { key: 'open', label: 'Open' },
+  { key: 'closed', label: 'Closed' },
+];
+const STATE_LABEL = { merged: 'merged', open: 'open', draft: 'draft', closed: 'closed' };
+const REPO_PREVIEW = 8;
+const DAY = 86_400_000;
 
 const $ = (sel) => document.querySelector(sel);
-
-function groupBy(list, key) {
-  const m = new Map();
-  for (const x of list) {
-    const k = key(x);
-    if (!m.has(k)) m.set(k, []);
-    m.get(k).push(x);
-  }
-  return m;
-}
 
 function h(tag, attrs = {}, ...children) {
   const el = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) {
     if (v == null || v === false) continue;
     if (k === 'class') el.className = v;
-    else if (k === 'html') el.innerHTML = v; // only ever used with the static ICONS above
+    else if (k === 'style') el.style.cssText = v;
     else if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
     else el.setAttribute(k, v === true ? '' : v);
   }
@@ -44,231 +23,320 @@ function h(tag, attrs = {}, ...children) {
   return el;
 }
 
-function icon(name, cls = '') {
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('viewBox', '0 0 16 16');
-  svg.setAttribute('class', `ic ${cls}`.trim());
-  svg.setAttribute('aria-hidden', 'true');
-  svg.innerHTML = ICONS[name];
-  return svg;
+function img(src) {
+  return h('img', { src: src || null, alt: '', loading: 'lazy', decoding: 'async', onerror: (e) => (e.target.style.visibility = 'hidden') });
 }
 
-function statusIcon(state) {
-  const el = icon(state, `s-${state}`);
-  el.setAttribute('role', 'img');
-  el.removeAttribute('aria-hidden');
-  el.setAttribute('aria-label', LABEL[state]);
-  return el;
-}
+const fmtShort = new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+const fmtMonth = new Intl.DateTimeFormat('en', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+const fmtMonthShort = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+const fmtFull = new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
-const compact = new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 });
-const shortDate = new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric', year: 'numeric' });
-const monthFmt = new Intl.DateTimeFormat('en', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+const statusOf = (pr) => (pr.state === 'draft' ? 'open' : pr.state);
+const eventDate = (pr) => pr.mergedAt ?? pr.closedAt ?? pr.createdAt;
+const monthKey = (iso) => iso.slice(0, 7);
+const monthDate = (key) => new Date(`${key}-01T00:00:00Z`);
+const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
-const filterKey = (pr) => (pr.state === 'draft' ? 'open' : pr.state);
-const prDate = (pr) => pr.mergedAt ?? pr.closedAt ?? pr.createdAt;
+/* ---------- view state, kept in the URL hash ---------- */
 
-function img(src, alt = '') {
-  return h('img', { src, alt, loading: 'lazy', decoding: 'async', onerror: (e) => (e.target.style.visibility = 'hidden') });
-}
-
-/* ---------- state (kept in the URL hash so views can be shared) ---------- */
-
-const state = { view: 'repos', show: new Set(['merged', 'open']), q: '' };
+const view = { status: 'all', repo: null, q: '' };
 
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
-  if (p.get('view') === 'timeline') state.view = 'timeline';
-  if (p.has('show')) state.show = new Set(p.get('show').split(',').filter((s) => FILTERS.includes(s)));
-  state.q = p.get('q') ?? '';
+  const s = p.get('status');
+  if (STATUSES.some((x) => x.key === s)) view.status = s;
+  view.repo = p.get('repo');
+  view.q = p.get('q') ?? '';
 }
 
 function writeHash() {
   const p = new URLSearchParams();
-  if (state.view !== 'repos') p.set('view', state.view);
-  const show = FILTERS.filter((s) => state.show.has(s)).join(',');
-  if (show !== 'merged,open') p.set('show', show);
-  if (state.q) p.set('q', state.q);
+  if (view.status !== 'all') p.set('status', view.status);
+  if (view.repo) p.set('repo', view.repo);
+  if (view.q) p.set('q', view.q);
   const s = p.toString();
   history.replaceState(null, '', s ? `#${s}` : location.pathname + location.search);
 }
 
-/* ---------- rendering ---------- */
+/* ---------- data ---------- */
 
-function renderHero(data) {
-  const { user, stats } = data;
+let data;
+let repoByName;
+let all;
+
+function prepare(raw) {
+  data = raw;
+  repoByName = new Map(data.repos.map((r) => [r.fullName, r]));
+  all = [...data.prs].sort((a, b) => eventDate(b).localeCompare(eventDate(a)));
+}
+
+function matches(pr, { status = view.status, repo = view.repo, q = view.q } = {}) {
+  if (status !== 'all' && statusOf(pr) !== status) return false;
+  if (repo && pr.repo !== repo) return false;
+  const needle = q.trim().toLowerCase();
+  return !needle || pr.title.toLowerCase().includes(needle) || pr.repo.toLowerCase().includes(needle);
+}
+
+/* ---------- sidebar ---------- */
+
+function renderProfile() {
+  const { user } = data;
   const name = user.name || user.login;
   document.title = `${name} · PR Wall`;
+  $('#me').href = user.url;
   $('#me-avatar').src = user.avatarUrl;
-  $('#me-name').replaceChildren(h('a', { href: user.url }, name));
-  $('#tagline').textContent = data.tagline || 'Pull requests to open-source projects.';
-
-  const stat = (label, value, cls) =>
-    h('div', {}, h('dt', {}, label), h('dd', { class: cls }, value));
-  $('#stats').replaceChildren(
-    stat('Merged PRs', String(stats.merged), 'merged'),
-    stat('Repositories', String(stats.repos)),
-    stat('Organizations', String(stats.owners)),
-    stat('Stars of merged-into repos', compact.format(stats.stars)),
+  $('#me-name').textContent = name;
+  $('#me-login').textContent = `@${user.login}`;
+  $('#tagline').textContent = data.tagline || 'Open-source contributions, newest first';
+  $('#updated').replaceChildren(
+    `Updated ${fmtFull.format(new Date(data.generatedAt))} from the `,
+    h('a', { href: `https://github.com/pulls?q=${encodeURIComponent(`is:pr author:${user.login}`)}` }, 'GitHub API'),
   );
-
-  renderActivity(data.prs);
 }
 
-function renderActivity(prs) {
-  const box = $('#activity');
-  if (!prs.length) return box.remove();
-  const key = (iso) => iso.slice(0, 7);
-  const counts = new Map();
-  for (const pr of prs) counts.set(key(pr.createdAt), (counts.get(key(pr.createdAt)) ?? 0) + 1);
-
-  const first = new Date(prs.at(-1).createdAt);
-  const now = new Date();
-  const months = [];
-  for (let y = first.getUTCFullYear(), m = first.getUTCMonth(); ; m++) {
-    if (m === 12) { m = 0; y++; }
-    const k = `${y}-${String(m + 1).padStart(2, '0')}`;
-    months.push(k);
-    if (y > now.getUTCFullYear() || (y === now.getUTCFullYear() && m >= now.getUTCMonth())) break;
+function marker(key) {
+  if (key === 'all') {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 16 16');
+    svg.setAttribute('class', 'ic');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.innerHTML = '<path d="M8 1.5v13"/><circle cx="8" cy="4.5" r="2" fill="var(--side)"/><circle cx="8" cy="11.5" r="2" fill="var(--side)"/>';
+    return svg;
   }
-  const max = Math.max(...counts.values());
-  box.replaceChildren(
-    ...months.map((k) => {
-      const n = counts.get(k) ?? 0;
-      const label = `${monthFmt.format(new Date(`${k}-01T00:00:00Z`))}: ${n} PR${n === 1 ? '' : 's'} opened`;
-      return h('span', { class: n ? 'hot' : null, style: `height:${n ? Math.max(12, (n / max) * 100) : 5}%`, title: label });
-    }),
-  );
-  box.after(h('div', { class: 'activity-axis', 'aria-hidden': 'true' }, h('span', {}, months[0]), h('span', {}, months.at(-1))));
+  return h('i', { class: `node ${key}`, 'aria-hidden': 'true' });
 }
 
-function renderControls(data) {
-  for (const btn of document.querySelectorAll('.seg button')) {
-    btn.setAttribute('aria-selected', String(btn.dataset.view === state.view));
-    btn.onclick = () => { state.view = btn.dataset.view; update(data); };
+function renderStatus() {
+  const counts = { all: 0, merged: 0, open: 0, closed: 0 };
+  for (const pr of all) {
+    if (!matches(pr, { status: 'all' })) continue;
+    counts.all++;
+    counts[statusOf(pr)]++;
   }
-
-  const counts = { merged: 0, open: 0, closed: 0 };
-  for (const pr of data.prs) counts[filterKey(pr)]++;
-  $('#chips').replaceChildren(
-    ...FILTERS.map((s) =>
+  $('#status').replaceChildren(
+    ...STATUSES.map((s) =>
       h('button', {
         type: 'button',
-        class: 'chip',
-        'aria-pressed': String(state.show.has(s)),
-        onclick: () => { state.show.has(s) ? state.show.delete(s) : state.show.add(s); update(data); },
-      }, icon(s, `s-${s}`), LABEL[s], h('span', { class: 'n' }, String(counts[s]))),
+        'aria-current': String(view.status === s.key),
+        onclick: () => { view.status = s.key; update(); },
+      }, marker(s.key), h('span', {}, s.label), h('span', { class: 'n' }, String(counts[s.key]))),
     ),
   );
-
-  const q = $('#q');
-  q.value = state.q;
-  q.oninput = () => { state.q = q.value; update(data, { keepControls: true }); };
 }
 
-function visiblePrs(data) {
-  const q = state.q.trim().toLowerCase();
-  return data.prs
-    .filter((pr) => state.show.has(filterKey(pr)) && (!q || pr.title.toLowerCase().includes(q) || pr.repo.toLowerCase().includes(q)))
-    .sort((a, b) => prDate(b).localeCompare(prDate(a)));
-}
+let showAllRepos = false;
 
-function prRow(pr) {
-  return h('li', {},
-    statusIcon(pr.state),
-    h('a', { href: pr.url, title: `#${pr.number}` }, pr.title),
-    h('time', { class: 'pr-when', datetime: prDate(pr) }, shortDate.format(new Date(prDate(pr)))),
-  );
-}
+function renderRepos() {
+  const counts = new Map();
+  for (const pr of all) {
+    if (!matches(pr, { repo: null })) continue;
+    counts.set(pr.repo, (counts.get(pr.repo) ?? 0) + 1);
+  }
+  const ranked = [...counts].sort((a, b) =>
+    b[1] - a[1] || (repoByName.get(b[0])?.stars ?? 0) - (repoByName.get(a[0])?.stars ?? 0));
+  const max = ranked[0]?.[1] ?? 1;
+  const selectedIdx = ranked.findIndex(([name]) => name === view.repo);
+  const limit = showAllRepos ? ranked.length : Math.max(REPO_PREVIEW, selectedIdx + 1);
 
-function repoCard(repo, prs) {
-  const list = h('ul', { class: 'pr-list' }, prs.slice(0, PREVIEW).map(prRow));
-  const merged = prs.filter((p) => p.state === 'merged').length;
-  const rest = prs.length - PREVIEW;
-  const more = rest > 0 &&
-    h('button', {
-      type: 'button',
-      class: 'more',
-      onclick: (e) => { list.append(...prs.slice(PREVIEW).map(prRow)); e.target.remove(); },
-    }, `Show ${rest} more`);
-
-  return h('article', { class: 'repo' },
-    h('div', { class: 'repo-head' },
-      img(repo.avatarUrl),
-      h('div', {},
-        h('a', { class: 'repo-name', href: repo.url }, h('span', { class: 'owner' }, `${repo.owner}/`), repo.name),
-        repo.description && h('p', { class: 'repo-desc' }, repo.description),
-      ),
-    ),
-    h('div', { class: 'repo-meta' },
-      h('span', { title: `${repo.stars} stars` }, icon('star'), h('span', { class: 'num' }, compact.format(repo.stars))),
-      repo.language && h('span', {},
-        h('i', { class: 'lang-dot', style: `background:${LANG_COLORS[repo.language] ?? 'var(--faint)'}` }), repo.language),
-      h('span', {}, merged ? `${merged} merged` : `${prs.length} PR${prs.length === 1 ? '' : 's'}`),
-    ),
-    list,
-    more,
-  );
-}
-
-function renderRepos(data, prs) {
-  const byRepo = groupBy(prs, (p) => p.repo);
-  const cards = data.repos.filter((r) => byRepo.has(r.fullName)).map((r) => repoCard(r, byRepo.get(r.fullName)));
-  return h('div', { class: 'grid' }, cards);
-}
-
-function renderTimeline(data, prs) {
-  const repos = new Map(data.repos.map((r) => [r.fullName, r]));
-  const byMonth = groupBy(prs, (p) => prDate(p).slice(0, 7));
-  return [...byMonth].map(([month, items]) =>
-    h('section', { class: 'month' },
-      h('h2', {}, monthFmt.format(new Date(`${month}-01T00:00:00Z`))),
-      h('ul', { class: 'rows' },
-        items.map((pr) =>
-          h('li', {},
-            statusIcon(pr.state),
-            img(repos.get(pr.repo)?.avatarUrl ?? ''),
-            h('div', { class: 'title' },
-              h('a', { href: pr.url }, pr.title),
-              h('small', {}, `${pr.repo} #${pr.number}`),
-            ),
-            h('time', { class: 'pr-when', datetime: prDate(pr) }, shortDate.format(new Date(prDate(pr)))),
-          ),
+  $('#repo-count').textContent = String(ranked.length);
+  $('#repos').replaceChildren(
+    ...ranked.slice(0, limit).map(([name, n]) => {
+      const repo = repoByName.get(name);
+      const [owner, short] = name.split('/');
+      return h('li', {},
+        h('button', {
+          type: 'button',
+          class: 'repo-btn',
+          'aria-pressed': String(view.repo === name),
+          title: `${name} · ${plural(n, 'PR')}`,
+          onclick: () => { view.repo = view.repo === name ? null : name; update(); },
+        },
+        img(repo?.avatarUrl),
+        h('span', { class: 'name' }, `${owner}/`, h('b', {}, short)),
+        h('span', { class: 'n' }, String(n)),
+        h('span', { class: 'track' }, h('i', { style: `width:${(n / max) * 100}%` })),
         ),
-      ),
+      );
+    }),
+  );
+
+  const more = $('#repos-more');
+  more.hidden = ranked.length <= REPO_PREVIEW;
+  more.textContent = showAllRepos ? 'Show fewer' : `Show all ${ranked.length}`;
+  more.onclick = () => { showAllRepos = !showAllRepos; renderRepos(); };
+}
+
+/* ---------- stats ---------- */
+
+function renderStats() {
+  const ref = new Date(data.generatedAt).getTime();
+  const merged = all.filter((p) => p.state === 'merged');
+  const closed = all.filter((p) => p.state === 'closed').length;
+  const inWindow = (from, to) => merged.filter((p) => {
+    const t = new Date(p.mergedAt).getTime();
+    return t > ref - to * DAY && t <= ref - from * DAY;
+  }).length;
+  const thisYear = inWindow(0, 365);
+  const lastYear = inWindow(365, 730);
+  const latest = [...merged].sort((a, b) => b.mergedAt.localeCompare(a.mergedAt))[0];
+  const owners = new Set(data.repos.map((r) => r.owner.toLowerCase())).size;
+  const rate = merged.length + closed ? Math.round((merged.length / (merged.length + closed)) * 100) : 0;
+
+  const diff = thisYear - lastYear;
+  const change = diff === 0 ? 'same as the year before' : `${diff > 0 ? '+' : '−'}${Math.abs(diff)} vs the year before`;
+
+  const stat = (label, fig, sub, cls = '') =>
+    h('div', {}, h('dt', {}, label), h('dd', {}, h('span', { class: `fig ${cls}` }, fig), h('span', { class: 'sub', title: sub }, sub)));
+
+  $('#stats').replaceChildren(
+    stat('Merged', String(merged.length), `${rate}% of finished PRs`, 'merged'),
+    stat('Merged, last 12 months', String(thisYear), change),
+    stat('Repositories', String(data.repos.length), `across ${plural(owners, 'organization')}`),
+    latest
+      ? stat('Latest merge', fmtShort.format(new Date(latest.mergedAt)), `${latest.repo} #${latest.number}`)
+      : stat('Latest merge', '—', 'none yet'),
+  );
+  $('#total').textContent = String(all.length);
+}
+
+/* ---------- chart ---------- */
+
+function renderChart() {
+  const box = $('#chart');
+  const prs = all.filter((p) => matches(p, { status: 'all' }));
+  const ref = monthKey(data.generatedAt);
+  const first = all.length ? monthKey(all.at(-1).createdAt) : ref;
+
+  const months = [];
+  for (let d = monthDate(first); monthKey(d.toISOString()) <= ref; d.setUTCMonth(d.getUTCMonth() + 1)) {
+    months.push(monthKey(d.toISOString()));
+  }
+  const fit = Math.max(6, Math.floor((box.clientWidth - 28) / 10));
+  const shown = months.slice(-fit);
+
+  const tally = new Map(shown.map((m) => [m, { merged: 0, other: 0 }]));
+  for (const pr of prs) {
+    const t = tally.get(monthKey(eventDate(pr)));
+    if (t) t[pr.state === 'merged' ? 'merged' : 'other']++;
+  }
+  const peak = Math.max(1, ...[...tally.values()].map((t) => t.merged + t.other));
+  const top = peak <= 4 ? 4 : Math.ceil(peak / 4) * 4;
+
+  const pct = (n) => `${(n / top) * 100}%`;
+  const plot = h('div', { class: 'plot' },
+    [top, top / 2, 0].map((v) => h('div', { class: 'grid-line', style: `top:${100 - (v / top) * 100}%` }, h('span', {}, String(v)))),
+    h('div', { class: 'bars' },
+      shown.map((m) => {
+        const t = tally.get(m);
+        const label = `${fmtMonthShort.format(monthDate(m))}: ${t.merged} merged, ${t.other} open or closed`;
+        return h('div', { class: 'col', title: label, role: 'img', 'aria-label': label },
+          t.merged ? h('i', { class: 'm', style: `height:${pct(t.merged)}` }) : null,
+          t.other ? h('i', { class: 'o', style: `height:${pct(t.other)}` }) : null,
+        );
+      }),
     ),
+  );
+
+  const step = 100 / shown.length;
+  const ticks = shown
+    .map((m, i) => ({ m, i }))
+    .filter(({ m, i }) => m.endsWith('-01') || i === 0)
+    .filter(({ m, i }, k, arr) => !(i === 0 && arr[1] && arr[1].i < 6));
+  const axis = h('div', { class: 'xaxis', 'aria-hidden': 'true' },
+    ticks.map(({ m, i }) => h('span', { style: `left:${i * step}%` }, m.endsWith('-01') ? m.slice(0, 4) : fmtMonthShort.format(monthDate(m)))),
+  );
+  box.replaceChildren(plot, axis);
+}
+
+/* ---------- log ---------- */
+
+function row(pr) {
+  const repo = repoByName.get(pr.repo);
+  const status = statusOf(pr);
+  const verb = pr.state === 'merged' ? 'merged' : pr.state === 'closed' ? 'closed' : 'opened';
+  return h('li', { class: `row ${status}` },
+    h('i', { class: `node ${pr.state}`, role: 'img', 'aria-label': STATE_LABEL[pr.state] }),
+    img(repo?.avatarUrl),
+    h('div', { class: 'what' },
+      h('a', { href: pr.url }, pr.title),
+      h('small', {}, h('b', {}, pr.repo), ` #${pr.number} · `, h('span', { class: `state ${status}` }, verb)),
+    ),
+    h('time', { class: 'when', datetime: eventDate(pr) }, fmtShort.format(new Date(eventDate(pr)))),
   );
 }
 
-function update(data, { keepControls = false } = {}) {
-  writeHash();
-  if (!keepControls) renderControls(data);
-  const prs = visiblePrs(data);
-  const wall = $('#wall');
+function renderLog() {
+  const prs = all.filter((p) => matches(p));
+  const log = $('#log');
   if (!prs.length) {
-    wall.replaceChildren(h('p', { class: 'empty' }, 'No pull requests match these filters.'));
+    log.replaceChildren(h('p', { class: 'empty' }, 'No pull requests match'));
     return;
   }
-  wall.replaceChildren(...[state.view === 'timeline' ? renderTimeline(data, prs) : renderRepos(data, prs)].flat());
+  const months = new Map();
+  for (const pr of prs) {
+    const k = monthKey(eventDate(pr));
+    if (!months.has(k)) months.set(k, []);
+    months.get(k).push(pr);
+  }
+  log.replaceChildren(
+    ...[...months].map(([m, items]) => {
+      const merged = items.filter((p) => p.state === 'merged').length;
+      return h('section', { class: 'month' },
+        h('div', { class: 'month-head' },
+          h('h2', {}, fmtMonth.format(monthDate(m))),
+          h('span', { class: 'n' }, merged ? `${merged} merged` : plural(items.length, 'PR')),
+        ),
+        h('ol', { class: 'rows' }, items.map(row)),
+      );
+    }),
+  );
+}
+
+function renderFilter() {
+  const box = $('#filter');
+  box.hidden = !view.repo;
+  if (!view.repo) return box.replaceChildren();
+  box.replaceChildren(
+    'Showing',
+    h('button', { type: 'button', 'aria-label': `Clear filter ${view.repo}`, onclick: () => { view.repo = null; update(); } },
+      view.repo, h('span', { 'aria-hidden': 'true' }, '×')),
+  );
+}
+
+function update() {
+  writeHash();
+  renderStatus();
+  renderRepos();
+  renderChart();
+  renderFilter();
+  renderLog();
 }
 
 async function main() {
   readHash();
-  let data;
   try {
     const res = await fetch('data/prs.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error(res.statusText);
-    data = await res.json();
+    prepare(await res.json());
   } catch (err) {
-    $('#wall').replaceChildren(h('p', { class: 'empty' }, `Couldn't load data/prs.json (${err.message}).`));
+    $('#log').replaceChildren(h('p', { class: 'empty' }, `Couldn't load data/prs.json (${err.message})`));
     return;
   }
-  renderHero(data);
-  update(data);
-  $('#foot').replaceChildren(
-    `Updated ${shortDate.format(new Date(data.generatedAt))} from the GitHub API. `,
-    h('a', { href: data.user.url }, `@${data.user.login}`),
-  );
+  if (view.repo && !repoByName.has(view.repo)) view.repo = null;
+  renderProfile();
+  renderStats();
+  $('#q').value = view.q;
+  $('#q').addEventListener('input', (e) => { view.q = e.target.value; update(); });
+  update();
+  $('#log').classList.add('enter');
+  if (matchMedia('(max-width: 860px)').matches && !view.repo) $('#repos-box').open = false;
+
+  let width = $('#chart').clientWidth;
+  new ResizeObserver(() => {
+    const w = $('#chart').clientWidth;
+    if (w !== width) { width = w; renderChart(); }
+  }).observe($('#chart'));
 }
 
 main();

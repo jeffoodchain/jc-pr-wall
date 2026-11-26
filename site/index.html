@@ -2,43 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>PR Wall</title>
-  <meta name="description" content="A wall of pull requests to open-source projects.">
+  <meta name="description" content="Pull requests to open-source projects, newest first.">
   <meta name="color-scheme" content="light dark">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg fill='none' stroke='%238250df' stroke-width='1.6' stroke-linecap='round'%3E%3Ccircle cx='4' cy='3.5' r='1.75'/%3E%3Ccircle cx='4' cy='12.5' r='1.75'/%3E%3Ccircle cx='12' cy='8' r='1.75'/%3E%3Cpath d='M4 5.25v5.5M4 5.25c0 2 2 2.75 4 2.75h2.25'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0v16' stroke='%23737373' stroke-width='1.5'/%3E%3Ccircle cx='8' cy='8' r='4' fill='%236e56cf'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="page">
-    <header class="hero">
-      <div class="who">
-        <img class="me" id="me-avatar" alt="" width="64" height="64">
-        <div>
-          <h1 id="me-name">PR Wall</h1>
-          <p class="tagline" id="tagline"></p>
+  <div class="shell">
+    <aside class="side">
+      <a class="me" id="me" href="#">
+        <img id="me-avatar" alt="" width="40" height="40">
+        <span>
+          <strong id="me-name">PR Wall</strong>
+          <small id="me-login"></small>
+        </span>
+      </a>
+
+      <nav class="status" id="status" aria-label="Status"></nav>
+
+      <details class="repos" id="repos-box" open>
+        <summary>Repositories <span class="n" id="repo-count"></span></summary>
+        <ul id="repos"></ul>
+        <button type="button" class="more" id="repos-more" hidden></button>
+      </details>
+
+      <p class="updated" id="updated"></p>
+    </aside>
+
+    <main class="main">
+      <header class="top">
+        <div class="title">
+          <h1>Pull requests <span class="n" id="total"></span></h1>
+          <p id="tagline"></p>
         </div>
-      </div>
+        <label class="search">
+          <span class="sr-only">Search</span>
+          <svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14"/></svg>
+          <input id="q" type="search" placeholder="Search" autocomplete="off">
+        </label>
+      </header>
+
       <dl class="stats" id="stats"></dl>
-      <div class="activity" id="activity" aria-label="Pull requests opened per month"></div>
-    </header>
 
-    <nav class="controls" aria-label="Filters">
-      <div class="seg" role="tablist" aria-label="View">
-        <button type="button" role="tab" data-view="repos">Repos</button>
-        <button type="button" role="tab" data-view="timeline">Timeline</button>
-      </div>
-      <div class="chips" id="chips"></div>
-      <label class="search">
-        <span class="sr-only">Search</span>
-        <input id="q" type="search" placeholder="Search PRs or repos" autocomplete="off">
-      </label>
-    </nav>
+      <section class="panel chart-panel" aria-labelledby="chart-title">
+        <div class="panel-head">
+          <h2 id="chart-title">Pull requests per month</h2>
+          <ul class="legend">
+            <li><i class="key merged"></i>Merged</li>
+            <li><i class="key other"></i>Open or closed</li>
+          </ul>
+        </div>
+        <div class="chart" id="chart"></div>
+      </section>
 
-    <section id="wall" aria-live="polite"></section>
-
-    <footer class="foot" id="foot"></footer>
-  </main>
+      <div class="filter" id="filter" hidden></div>
+      <section class="log" id="log" aria-live="polite"></section>
+    </main>
+  </div>
   <script src="app.js" type="module"></script>
 </body>
 </html>

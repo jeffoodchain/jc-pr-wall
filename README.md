@@ -3,7 +3,7 @@
 ![PR wall screenshot](docs/screenshot.png)
 
 My own PR wall: every pull request I've opened to someone else's open-source
-project, grouped by repository or laid out as a timeline.
+project, newest first, with a monthly activity chart and filters by status and repository.
 
 It's a static site in `site/` with no build step and no dependencies. A GitHub
 Action refreshes the data daily and deploys it to GitHub Pages.
@@ -13,8 +13,8 @@ Action refreshes the data daily and deploys it to GitHub Pages.
 - `scripts/fetch-prs.mjs` runs GitHub's search API for `is:pr author:<you> -user:<you>`,
   looks up each repository's stars, language and avatar, and writes `site/data/prs.json`.
   PRs to private repositories are dropped.
-- `site/` reads that file in the browser and renders the wall. Filters, search
-  and the current view are kept in the URL hash, so a filtered view can be shared.
+- `site/` reads that file in the browser and renders the log. Filters, search
+  and the selected repository are kept in the URL hash, so a filtered view can be shared.
 - `.github/workflows/deploy.yml` runs the tests, fetches fresh data, and deploys
   `site/` to Pages on every push to `main`, once a day, and on demand. If the fetch
   fails, the committed `site/data/prs.json` is deployed as-is.
