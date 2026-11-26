@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T09:22:39.562Z",
+  "generatedAt": "2026-11-26T16:30:29.292Z",
   "user": {
     "login": "jeffoodchain",
     "name": null,
@@ -7,13 +7,13 @@
     "url": "https://github.com/jeffoodchain"
   },
   "stats": {
-    "total": 116,
-    "merged": 82,
-    "open": 10,
-    "closed": 24,
-    "repos": 36,
-    "owners": 20,
-    "stars": 10495
+    "total": 105,
+    "merged": 74,
+    "open": 9,
+    "closed": 22,
+    "repos": 34,
+    "owners": 18,
+    "stars": 10436
   },
   "repos": [
     {
@@ -23,17 +23,7 @@
       "url": "https://github.com/flyteorg/flyte",
       "avatarUrl": "https://avatars.githubusercontent.com/u/35380635?v=4",
       "description": "Type-safe, distributed orchestration of agents, ML pipelines, and real-time inference on your k8s — in pure Python with async/await, also other languages (rust, go and ts)",
-      "stars": 7805,
-      "language": "Go"
-    },
-    {
-      "fullName": "OffchainLabs/prysm",
-      "owner": "OffchainLabs",
-      "name": "prysm",
-      "url": "https://github.com/OffchainLabs/prysm",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/43838009?v=4",
-      "description": "Go implementation of Ethereum proof of stake",
-      "stars": 3792,
+      "stars": 7800,
       "language": "Go"
     },
     {
@@ -115,16 +105,6 @@
       "description": "Next.js documentation in Traditional Chinese, maintained by the opensource community. 由開源社群維護的 Next.js 繁體中文官方文件。",
       "stars": 62,
       "language": "MDX"
-    },
-    {
-      "fullName": "eth-protocol-fellows/cohort-seven",
-      "owner": "eth-protocol-fellows",
-      "name": "cohort-seven",
-      "url": "https://github.com/eth-protocol-fellows/cohort-seven",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/84336121?v=4",
-      "description": "The seventh cohort of the Ethereum Protocol Fellowship",
-      "stars": 54,
-      "language": "Python"
     },
     {
       "fullName": "zen-eth/eth-p2p-z",
@@ -389,26 +369,6 @@
       "closedAt": "2026-11-16T19:35:19Z"
     },
     {
-      "repo": "OffchainLabs/prysm",
-      "number": 17800,
-      "title": "Lc backfill era performance fix",
-      "url": "https://github.com/OffchainLabs/prysm/pull/17800",
-      "state": "closed",
-      "createdAt": "2026-10-30T10:22:07Z",
-      "mergedAt": null,
-      "closedAt": "2026-10-30T10:22:32Z"
-    },
-    {
-      "repo": "OffchainLabs/prysm",
-      "number": 17731,
-      "title": "Lc backfill builder",
-      "url": "https://github.com/OffchainLabs/prysm/pull/17731",
-      "state": "closed",
-      "createdAt": "2026-10-19T04:49:45Z",
-      "mergedAt": null,
-      "closedAt": "2026-10-19T04:50:11Z"
-    },
-    {
       "repo": "apache/asyncband",
       "number": 351,
       "title": "refactor(rwlock): move guard permits into access tokens",
@@ -429,16 +389,6 @@
       "closedAt": "2026-11-25T01:23:40Z"
     },
     {
-      "repo": "OffchainLabs/prysm",
-      "number": 17521,
-      "title": "Feat: Lc backfill data type",
-      "url": "https://github.com/OffchainLabs/prysm/pull/17521",
-      "state": "open",
-      "createdAt": "2026-09-19T08:37:26Z",
-      "mergedAt": null,
-      "closedAt": null
-    },
-    {
       "repo": "apache/datasketches-rust",
       "number": 264,
       "title": "refactor: remove the rand runtime dependency and add common random bit function",
@@ -447,16 +397,6 @@
       "createdAt": "2026-09-02T09:29:52Z",
       "mergedAt": "2026-09-02T13:59:22Z",
       "closedAt": "2026-09-02T13:59:22Z"
-    },
-    {
-      "repo": "eth-protocol-fellows/cohort-seven",
-      "number": 378,
-      "title": "update jeff week 10 and 11",
-      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/378",
-      "state": "merged",
-      "createdAt": "2026-08-31T15:45:35Z",
-      "mergedAt": "2026-09-02T09:40:54Z",
-      "closedAt": "2026-09-02T09:40:54Z"
     },
     {
       "repo": "apache/datasketches-rust",
@@ -489,46 +429,6 @@
       "closedAt": "2026-08-25T09:19:14Z"
     },
     {
-      "repo": "eth-protocol-fellows/cohort-seven",
-      "number": 326,
-      "title": "feat: update week 6-8",
-      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/326",
-      "state": "merged",
-      "createdAt": "2026-08-14T10:10:10Z",
-      "mergedAt": "2026-08-14T11:49:23Z",
-      "closedAt": "2026-08-14T11:49:23Z"
-    },
-    {
-      "repo": "eth-protocol-fellows/cohort-seven",
-      "number": 322,
-      "title": "prysm light client backfill proposal",
-      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/322",
-      "state": "merged",
-      "createdAt": "2026-08-12T14:27:36Z",
-      "mergedAt": "2026-10-14T19:21:37Z",
-      "closedAt": "2026-10-14T19:21:37Z"
-    },
-    {
-      "repo": "eth-protocol-fellows/cohort-seven",
-      "number": 223,
-      "title": "Jeff week4 and 5 update",
-      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/223",
-      "state": "merged",
-      "createdAt": "2026-07-20T15:22:25Z",
-      "mergedAt": "2026-07-21T14:29:09Z",
-      "closedAt": "2026-07-21T14:29:09Z"
-    },
-    {
-      "repo": "eth-protocol-fellows/cohort-seven",
-      "number": 149,
-      "title": "update week 3",
-      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/149",
-      "state": "merged",
-      "createdAt": "2026-07-07T10:16:19Z",
-      "mergedAt": "2026-07-07T10:34:39Z",
-      "closedAt": "2026-07-07T10:34:39Z"
-    },
-    {
       "repo": "ReamLabs/leanstart",
       "number": 6,
       "title": "fix: update installation script url",
@@ -537,36 +437,6 @@
       "createdAt": "2026-07-07T05:35:59Z",
       "mergedAt": null,
       "closedAt": null
-    },
-    {
-      "repo": "eth-protocol-fellows/cohort-seven",
-      "number": 107,
-      "title": "update jeff week 2",
-      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/107",
-      "state": "merged",
-      "createdAt": "2026-06-29T07:45:28Z",
-      "mergedAt": "2026-06-30T05:46:41Z",
-      "closedAt": "2026-06-30T05:46:42Z"
-    },
-    {
-      "repo": "eth-protocol-fellows/cohort-seven",
-      "number": 75,
-      "title": "update week 1",
-      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/75",
-      "state": "merged",
-      "createdAt": "2026-06-22T15:24:34Z",
-      "mergedAt": "2026-06-25T13:30:30Z",
-      "closedAt": "2026-06-25T13:30:30Z"
-    },
-    {
-      "repo": "eth-protocol-fellows/cohort-seven",
-      "number": 44,
-      "title": "Add week 0 dev update for jeff chung",
-      "url": "https://github.com/eth-protocol-fellows/cohort-seven/pull/44",
-      "state": "merged",
-      "createdAt": "2026-06-15T17:36:28Z",
-      "mergedAt": "2026-06-17T09:04:13Z",
-      "closedAt": "2026-06-17T09:04:13Z"
     },
     {
       "repo": "william00646-cloud/Podcast2Notebook",

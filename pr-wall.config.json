@@ -3,7 +3,7 @@
   "displayName": "",
   "tagline": "My open-source contributions, newest first",
   "includeOwnRepos": false,
-  "excludeRepos": [],
+  "excludeRepos": ["OffchainLabs/prysm", "eth-protocol-fellows/cohort-seven"],
   "excludeOwners": [],
   "minRepoStars": 0
 }
