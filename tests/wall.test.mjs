@@ -72,6 +72,21 @@ test('buildWall honours excludeRepos, excludeOwners and minRepoStars (case-insen
   assert.deepEqual(wall.repos.map((r) => r.fullName), ['acme/rocket']);
 });
 
+test('buildWall keeps only includeOwners when it is set (case-insensitive)', () => {
+  const repos = [
+    repo(),
+    repo({ full_name: 'Keep/one', name: 'one', owner: { login: 'Keep', avatar_url: '' } }),
+    repo({ full_name: 'drop/two', name: 'two', owner: { login: 'drop', avatar_url: '' } }),
+  ];
+  const items = repos.map((r, i) =>
+    item({ number: i + 1, repository_url: `https://api.github.com/repos/${r.full_name}` }),
+  );
+  const wall = buildWall({ username: 'me', items, repos, config: { includeOwners: ['keep', 'ACME'] } });
+  assert.deepEqual(wall.repos.map((r) => r.fullName).sort(), ['Keep/one', 'acme/rocket']);
+  const all = buildWall({ username: 'me', items, repos, config: { includeOwners: [] } });
+  assert.equal(all.repos.length, 3);
+});
+
 test('buildWall computes stats and sorts PRs newest first', () => {
   const wall = buildWall({
     username: 'me',

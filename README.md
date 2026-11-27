@@ -36,6 +36,7 @@ Edit `pr-wall.config.json`:
 | `displayName` | Name in the header (defaults to the username) |
 | `tagline` | Line under the name |
 | `includeOwnRepos` | Also show PRs to your own repositories |
+| `includeOwners` | If set, only show repositories owned by these users or organizations |
 | `excludeRepos` | Repositories to hide, e.g. `["owner/name"]` |
 | `excludeOwners` | Users or organizations to hide entirely |
 | `minRepoStars` | Hide repositories with fewer stars than this |

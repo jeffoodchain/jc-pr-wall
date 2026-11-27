@@ -15,6 +15,7 @@ const lower = (list) => new Set((list ?? []).map((s) => s.toLowerCase()));
 export function buildWall({ username, user, items, repos, config }) {
   const excludeRepos = lower(config.excludeRepos);
   const excludeOwners = lower(config.excludeOwners);
+  const includeOwners = lower(config.includeOwners);
   const minStars = config.minRepoStars ?? 0;
 
   const repoInfo = new Map();
@@ -29,7 +30,9 @@ export function buildWall({ username, user, items, repos, config }) {
     const key = repoFromUrl(it.repository_url).toLowerCase();
     const r = repoInfo.get(key);
     if (!r) continue;
-    if (excludeRepos.has(key) || excludeOwners.has(r.owner.login.toLowerCase())) continue;
+    const owner = r.owner.login.toLowerCase();
+    if (includeOwners.size && !includeOwners.has(owner)) continue;
+    if (excludeRepos.has(key) || excludeOwners.has(owner)) continue;
     if (r.stargazers_count < minStars) continue;
 
     used.set(key, r);
